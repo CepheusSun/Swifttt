@@ -22,7 +22,6 @@ class LiveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         dump(model)
         self.setBackground()
     }
@@ -68,8 +67,7 @@ class LiveViewController: UIViewController {
     
     @IBAction func tapBack(_ sender: UIButton) {
         ijkPlayer.shutdown()
-        _ = navigationController?.popViewController(animated: true)
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tapGift(_ sender: UIButton) {
@@ -124,3 +122,4 @@ class LiveViewController: UIViewController {
     }
 
 }
+

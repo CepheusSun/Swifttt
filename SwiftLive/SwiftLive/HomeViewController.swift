@@ -10,7 +10,10 @@ import UIKit
 import Just
 import Kingfisher
 
-class HomeViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
+class HomeViewController: UIViewController ,
+UITableViewDelegate,
+UITableViewDataSource,
+UIViewControllerTransitioningDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -67,8 +70,17 @@ class HomeViewController: UIViewController , UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = LiveViewController()
         vc.model = dataSource[indexPath.row]
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.transitioningDelegate = self
+        self.present(vc, animated: true, completion: nil)
     }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentPushAnimation()
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentPushAnimation()
+    }
+    
 }
 
