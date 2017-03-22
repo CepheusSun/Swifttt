@@ -39,9 +39,7 @@ UIViewControllerTransitioningDelegate{
                               height: 60)
         
         button.addTarget(self, action: #selector(pushToStreamPage(sender:)), for: .touchUpInside)
-        button.layer.cornerRadius = 30
         button.setBackgroundImage(#imageLiteral(resourceName: "add"), for: .normal)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         view.addSubview(button)
     }
     
