@@ -15,8 +15,6 @@ class LiveViewController: UIViewController {
     var playerView: UIView!
     var ijkPlayer: IJKMediaPlayback!
     
-    
-    
     @IBOutlet weak var imgBackground: UIImageView!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnLike: UIButton!
