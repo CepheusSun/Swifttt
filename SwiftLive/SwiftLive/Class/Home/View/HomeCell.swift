@@ -23,6 +23,9 @@ class HomeCell: UITableViewCell {
     
     var model: HomeModel! {
         didSet {
+            if !model.portrait.hasPrefix("http") {
+                model.portrait = "http://img2.inke.cn/\(model.portrait)"
+            }
             let imgUrl = URL(string: (model.portrait))
             self.avatorImageview.kf.setImage(with: imgUrl)
             self.addressLabel.text = model.location.isEmpty ? "": model.location
@@ -37,7 +40,6 @@ class HomeCell: UITableViewCell {
     }
     
     static let identifier: String = "HomeCell"
-    
     class func cell(with tableview:UITableView!) -> HomeCell! {
         var cell  = tableview.dequeueReusableCell(withIdentifier: HomeCell.identifier)
         if cell == nil {

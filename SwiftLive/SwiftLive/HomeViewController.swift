@@ -63,5 +63,12 @@ class HomeViewController: UIViewController , UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 600
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = LiveViewController()
+        vc.model = dataSource[indexPath.row]
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
