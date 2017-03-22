@@ -31,31 +31,21 @@ class PresentPushAnimation: NSObject, UIViewControllerAnimatedTransitioning {
             fromView?.frame = frame
             toView?.frame = frame.offsetBy(dx: UIScreen.main.bounds.width, dy: 0)
             containeView.addSubview(toView!)
+        } else {
+            fromView?.frame = frame
+            toView?.frame = frame.offsetBy(dx: UIScreen.main.bounds.width * -1, dy: 0)
+            containeView.addSubview(toView!)
         }
         UIView.animate(withDuration: transitionDuration, animations: {
             if isPresent {
                 toView?.frame = frame
                 fromView?.frame = frame.offsetBy(dx: UIScreen.main.bounds.width * -1, dy: 0)
+            } else {
+                toView?.frame = frame
+                fromView?.frame = frame.offsetBy(dx: UIScreen.main.bounds.width, dy: 0)
             }
         }) { (finished) in
-            let isCancelled = transitionContext.transitionWasCancelled
-            if isCancelled {
-                toView?.removeFromSuperview()
-                transitionContext.completeTransition(!isCancelled)
-            }
+            transitionContext.completeTransition(true)
         }
     }
 }
-
-/*
-class DismissPopAnimation: NSObject, UIViewControllerAnimatedTransitioning{
-    // 指定转场动画持续的时间
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return TimeInterval(0.5)
-    }
-    
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
-    }
-}
-*/

@@ -64,6 +64,7 @@ class LiveViewController: UIViewController {
         if !self.ijkPlayer.isPlaying() {
             ijkPlayer.prepareToPlay()
         }
+        self.bringButtonToFront()
     }
     
     
@@ -120,7 +121,10 @@ class LiveViewController: UIViewController {
         btnAnimation.keyTimes = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
         btnAnimation.duration = 0.2
         sender.layer.add(btnAnimation, forKey: "SHOW")
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dump(model)
     }
 
 }

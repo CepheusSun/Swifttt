@@ -34,7 +34,7 @@
                     </constraints>
                     <state key="normal" image="gift"/>
                     <connections>
-                        <action selector="tapGift:" destination="-1" eventType="touchUpInside" id="C0H-sK-2Ry"/>
+                        <action selector="tapGift:" destination="-1" eventType="touchUpInside" id="CAE-l6-fh2"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ7-b5-tqA">
@@ -51,7 +51,7 @@
                     </constraints>
                     <state key="normal" image="like"/>
                     <connections>
-                        <action selector="tapLike:" destination="-1" eventType="touchUpInside" id="5Mz-4z-wDj"/>
+                        <action selector="tapLike:" destination="-1" eventType="touchUpInside" id="4VO-AL-FOd"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v9-Nm-ZED">
@@ -62,7 +62,7 @@
                     </constraints>
                     <state key="normal" image="goback"/>
                     <connections>
-                        <action selector="tapBack:" destination="-1" eventType="touchUpInside" id="Odl-mb-ZC3"/>
+                        <action selector="tapBack:" destination="-1" eventType="touchUpInside" id="Sac-0I-WYg"/>
                     </connections>
                 </button>
             </subviews>
