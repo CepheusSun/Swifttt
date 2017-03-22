@@ -35,14 +35,14 @@ class LiveViewController: UIViewController {
         
         let blurEffect = UIBlurEffect(style: .light)
         let effectView = UIVisualEffectView(effect: blurEffect)
-        effectView.frame = self.view.bounds
+        effectView.frame = UIScreen.main.bounds //self.view.bounds
         imgBackground.addSubview(effectView)
         self.setPlayerView()
         self.bringButtonToFront()
     }
     
     func setPlayerView() {
-        playerView = UIView(frame: view.bounds)
+        playerView = UIView(frame: UIScreen.main.bounds)
         view.addSubview(playerView)
         ijkPlayer = IJKFFMoviePlayerController(contentURLString: model.url, with: nil)
         let pv = ijkPlayer.view
