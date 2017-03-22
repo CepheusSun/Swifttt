@@ -76,6 +76,13 @@
                     <constraint firstAttribute="trailing" secondItem="Xiw-od-lwP" secondAttribute="trailing" id="zRR-fC-5ur"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="YwV-0l-83i" id="zWn-gO-tv1"/>
+                <outlet property="avatorImageview" destination="jzj-4C-ZoN" id="THK-bl-p4z"/>
+                <outlet property="bigImageView" destination="Xiw-od-lwP" id="c3k-VX-Lx1"/>
+                <outlet property="creatorNickName" destination="T6M-NY-FM9" id="qCT-0Q-DvE"/>
+                <outlet property="viewerCountLabel" destination="Lc4-oh-pmz" id="Ar8-QH-kRg"/>
+            </connections>
             <point key="canvasLocation" x="-217" y="374"/>
         </tableViewCell>
     </objects>

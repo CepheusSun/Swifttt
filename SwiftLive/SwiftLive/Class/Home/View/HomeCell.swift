@@ -10,6 +10,18 @@ import UIKit
 
 class HomeCell: UITableViewCell {
 
+    
+    @IBOutlet weak var avatorImageview: UIImageView!
+    
+    @IBOutlet weak var creatorNickName: UILabel!
+    
+    @IBOutlet weak var viewerCountLabel: UILabel!
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var bigImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
