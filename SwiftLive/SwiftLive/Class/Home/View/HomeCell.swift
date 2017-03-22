@@ -22,10 +22,7 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var bigImageView: UIImageView!
     
     var model: HomeModel! {
-        get {
-            return self.model
-        }
-        set {
+        didSet {
             let imgUrl = URL(string: (model.portrait))
             self.avatorImageview.kf.setImage(with: imgUrl)
             self.addressLabel.text = model.location.isEmpty ? "": model.location
@@ -34,7 +31,11 @@ class HomeCell: UITableViewCell {
             self.creatorNickName.text = model.nick
         }
     }
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.avatorImageview.layer.masksToBounds = true
+    }
+    
     static let identifier: String = "HomeCell"
     
     class func cell(with tableview:UITableView!) -> HomeCell! {
