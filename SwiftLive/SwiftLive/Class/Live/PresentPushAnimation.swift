@@ -9,7 +9,7 @@
 import UIKit
 
 class PresentPushAnimation: NSObject, UIViewControllerAnimatedTransitioning {
-    
+
     // 指定转场动画持续的时间
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return TimeInterval(0.5)
