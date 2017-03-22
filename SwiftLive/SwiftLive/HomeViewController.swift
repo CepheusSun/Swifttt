@@ -22,6 +22,8 @@ class HomeViewController: UIViewController , UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         self.loadList()
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.addTarget(self, action: #selector(loadList), for: .valueChanged)
         
     }
 
@@ -30,15 +32,24 @@ class HomeViewController: UIViewController , UITableViewDataSource, UITableViewD
             guard let json = r.json as? NSDictionary else {
                 return
             }
-            print(json)
+            let lives: [NSDictionary] = json.object(forKey: "lives") as! [NSDictionary]
+            self.dataSource = lives.map({ (live) -> HomeModel in
+                return HomeModel(portrait: (live.object(forKey: "creator") as! NSDictionary).object(forKey: "portrait") as! String,
+                                 nick: (live.object(forKey: "creator") as! NSDictionary).object(forKey: "nick") as! String,
+                                 location: live.object(forKey: "city") as! String,
+                                 viewers: live.object(forKey: "online_users") as! Int,
+                                 url: live.object(forKey: "stream_addr") as! String)
+            })
             
-            
+            OperationQueue.main.addOperation {
+                self.tableView.refreshControl?.endRefreshing()
+                self.tableView.reloadData()
+            }
         }
     }
 
     
     // MARK: UITableViewDataSource
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
