@@ -21,16 +21,29 @@ class HomeCell: UITableViewCell {
     
     @IBOutlet weak var bigImageView: UIImageView!
     
+    var model: HomeModel! {
+        get {
+            return self.model
+        }
+        set {
+            let imgUrl = URL(string: (model.portrait))
+            self.avatorImageview.kf.setImage(with: imgUrl)
+            self.addressLabel.text = model.location.isEmpty ? "": model.location
+            self.viewerCountLabel.text = "\(model.viewers)"
+            self.bigImageView.kf.setImage(with: imgUrl)
+            self.creatorNickName.text = model.nick
+        }
+    }
+        
+    static let identifier: String = "HomeCell"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    class func cell(with tableview:UITableView!) -> HomeCell! {
+        var cell  = tableview.dequeueReusableCell(withIdentifier: HomeCell.identifier)
+        if cell == nil {
+            cell = Bundle.main.loadNibNamed(HomeCell.identifier, owner: nil, options: nil)?.first as! UITableViewCell?
+        }
+        return cell as! HomeCell!
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
     
 }

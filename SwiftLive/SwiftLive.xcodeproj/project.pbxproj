@@ -12,10 +12,9 @@
 		33BD597E1E8251D700AE1E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD597C1E8251D700AE1E60 /* Main.storyboard */; };
 		33BD59801E8251D700AE1E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33BD597F1E8251D700AE1E60 /* Assets.xcassets */; };
 		33BD59831E8251D700AE1E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD59811E8251D700AE1E60 /* LaunchScreen.storyboard */; };
-		33BD59991E825CA300AE1E60 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD59981E825CA300AE1E60 /* LiveModel.swift */; };
-		33BD599B1E825CB300AE1E60 /* LiveCreatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD599A1E825CB300AE1E60 /* LiveCreatorModel.swift */; };
 		33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD599C1E825DAF00AE1E60 /* HomeCell.swift */; };
 		33BD599F1E825DAF00AE1E60 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BD599D1E825DAF00AE1E60 /* HomeCell.xib */; };
+		33BD59A11E8260AD00AE1E60 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD59A01E8260AD00AE1E60 /* HomeModel.swift */; };
 		D60F48BC497329955AAD89DF /* Pods_SwiftLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22ACF4148482DF453BBF4795 /* Pods_SwiftLive.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,10 +27,9 @@
 		33BD597F1E8251D700AE1E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33BD59821E8251D700AE1E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33BD59841E8251D700AE1E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33BD59981E825CA300AE1E60 /* LiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
-		33BD599A1E825CB300AE1E60 /* LiveCreatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCreatorModel.swift; sourceTree = "<group>"; };
 		33BD599C1E825DAF00AE1E60 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		33BD599D1E825DAF00AE1E60 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		33BD59A01E8260AD00AE1E60 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,8 +107,7 @@
 		33BD598D1E8254F000AE1E60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				33BD59981E825CA300AE1E60 /* LiveModel.swift */,
-				33BD599A1E825CB300AE1E60 /* LiveCreatorModel.swift */,
+				33BD59A01E8260AD00AE1E60 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,9 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33BD59A11E8260AD00AE1E60 /* HomeModel.swift in Sources */,
 				33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */,
-				33BD59991E825CA300AE1E60 /* LiveModel.swift in Sources */,
-				33BD599B1E825CB300AE1E60 /* LiveCreatorModel.swift in Sources */,
 				33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */,
 				33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */,
 			);
