@@ -21,26 +21,21 @@ class PresentPushAnimation: NSObject, UIViewControllerAnimatedTransitioning {
         let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         
         let containeView = transitionContext.containerView
-        
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)
         let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)
-        
         let transitionDuration = self.transitionDuration(using: transitionContext) as TimeInterval
         
+        let frame = UIScreen.main.bounds
         let isPresent = toVC?.presentingViewController == fromVC
-        
-        let fromRect = transitionContext.initialFrame(for: fromVC!)
-        let toRect = transitionContext.initialFrame(for: toVC!)
-        
         if isPresent {
-            fromView?.frame = fromRect
-            toView?.frame = toRect.offsetBy(dx: toRect.size.width, dy: 0)
+            fromView?.frame = frame
+            toView?.frame = frame.offsetBy(dx: UIScreen.main.bounds.width, dy: 0)
             containeView.addSubview(toView!)
         }
         UIView.animate(withDuration: transitionDuration, animations: {
             if isPresent {
-                toView?.frame = toRect
-                fromView?.frame = fromRect.offsetBy(dx: fromRect.size.width , dy: 0)
+                toView?.frame = frame
+                fromView?.frame = frame.offsetBy(dx: UIScreen.main.bounds.width * -1, dy: 0)
             }
         }) { (finished) in
             let isCancelled = transitionContext.transitionWasCancelled

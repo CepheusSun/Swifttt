@@ -27,9 +27,11 @@ class LiveViewController: UIViewController {
     }
 
     func setBackground() {
+        if !model.portrait.hasPrefix("http") {
+            model.portrait = "http://img2.inke.cn/\(model.portrait)"
+        }
         let imgUrl = URL(string: model.portrait)
         imgBackground.kf.setImage(with: imgUrl)
-        
         let blurEffect = UIBlurEffect(style: .light)
         let effectView = UIVisualEffectView(effect: blurEffect)
         effectView.frame = UIScreen.main.bounds //self.view.bounds
