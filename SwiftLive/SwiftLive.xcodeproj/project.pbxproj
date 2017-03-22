@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3311BFAC1E826D6C00AF6344 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311BFAA1E826D6C00AF6344 /* LiveViewController.swift */; };
+		3311BFAD1E826D6C00AF6344 /* LiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3311BFAB1E826D6C00AF6344 /* LiveViewController.xib */; };
+		3311BFAF1E826F0300AF6344 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFAE1E826F0300AF6344 /* CoreGraphics.framework */; };
+		3311BFB11E826F0900AF6344 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFB01E826F0900AF6344 /* libz.tbd */; };
+		3311BFB31E826F0F00AF6344 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFB21E826F0F00AF6344 /* AudioToolbox.framework */; };
+		3311BFB51E826F1600AF6344 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFB41E826F1600AF6344 /* AVFoundation.framework */; };
+		3311BFB71E826F2000AF6344 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFB61E826F2000AF6344 /* CoreMedia.framework */; };
+		3311BFB91E826F2B00AF6344 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFB81E826F2B00AF6344 /* CoreVideo.framework */; };
+		3311BFBB1E826F3200AF6344 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFBA1E826F3200AF6344 /* MobileCoreServices.framework */; };
+		3311BFBD1E826F3900AF6344 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFBC1E826F3900AF6344 /* MediaPlayer.framework */; };
+		3311BFBF1E826F4D00AF6344 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFBE1E826F4D00AF6344 /* OpenGLES.framework */; };
+		3311BFC11E826F5400AF6344 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFC01E826F5400AF6344 /* QuartzCore.framework */; };
+		3311BFC31E826F5800AF6344 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFC21E826F5800AF6344 /* UIKit.framework */; };
+		3311BFC51E826F5F00AF6344 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFC41E826F5F00AF6344 /* VideoToolbox.framework */; };
 		33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD59781E8251D700AE1E60 /* AppDelegate.swift */; };
 		33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD597A1E8251D700AE1E60 /* HomeViewController.swift */; };
 		33BD597E1E8251D700AE1E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD597C1E8251D700AE1E60 /* Main.storyboard */; };
@@ -20,6 +34,20 @@
 
 /* Begin PBXFileReference section */
 		22ACF4148482DF453BBF4795 /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3311BFAA1E826D6C00AF6344 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		3311BFAB1E826D6C00AF6344 /* LiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveViewController.xib; sourceTree = "<group>"; };
+		3311BFAE1E826F0300AF6344 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3311BFB01E826F0900AF6344 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3311BFB21E826F0F00AF6344 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3311BFB41E826F1600AF6344 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3311BFB61E826F2000AF6344 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3311BFB81E826F2B00AF6344 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3311BFBA1E826F3200AF6344 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3311BFBC1E826F3900AF6344 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3311BFBE1E826F4D00AF6344 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3311BFC01E826F5400AF6344 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3311BFC21E826F5800AF6344 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3311BFC41E826F5F00AF6344 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		33BD59751E8251D700AE1E60 /* SwiftLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33BD59781E8251D700AE1E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33BD597A1E8251D700AE1E60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../HomeViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +67,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3311BFC51E826F5F00AF6344 /* VideoToolbox.framework in Frameworks */,
+				3311BFC31E826F5800AF6344 /* UIKit.framework in Frameworks */,
+				3311BFC11E826F5400AF6344 /* QuartzCore.framework in Frameworks */,
+				3311BFBF1E826F4D00AF6344 /* OpenGLES.framework in Frameworks */,
+				3311BFBD1E826F3900AF6344 /* MediaPlayer.framework in Frameworks */,
+				3311BFBB1E826F3200AF6344 /* MobileCoreServices.framework in Frameworks */,
+				3311BFB91E826F2B00AF6344 /* CoreVideo.framework in Frameworks */,
+				3311BFB71E826F2000AF6344 /* CoreMedia.framework in Frameworks */,
+				3311BFB51E826F1600AF6344 /* AVFoundation.framework in Frameworks */,
+				3311BFB31E826F0F00AF6344 /* AudioToolbox.framework in Frameworks */,
+				3311BFB11E826F0900AF6344 /* libz.tbd in Frameworks */,
+				3311BFAF1E826F0300AF6344 /* CoreGraphics.framework in Frameworks */,
 				D60F48BC497329955AAD89DF /* Pods_SwiftLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +86,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3311BFA51E826D4B00AF6344 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				3311BFA61E826D4B00AF6344 /* Controller */,
+				3311BFA71E826D4B00AF6344 /* Model */,
+				3311BFA81E826D4B00AF6344 /* View */,
+				3311BFA91E826D4B00AF6344 /* ViewModel */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		3311BFA61E826D4B00AF6344 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3311BFAA1E826D6C00AF6344 /* LiveViewController.swift */,
+				3311BFAB1E826D6C00AF6344 /* LiveViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3311BFA71E826D4B00AF6344 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3311BFA81E826D4B00AF6344 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3311BFA91E826D4B00AF6344 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		33BD596C1E8251D700AE1E60 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +161,7 @@
 		33BD598A1E8254F000AE1E60 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3311BFA51E826D4B00AF6344 /* Live */,
 				33BD598B1E8254F000AE1E60 /* Home */,
 			);
 			path = Class;
@@ -140,6 +222,18 @@
 		917F46A7AA7FA6414368FDEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3311BFC41E826F5F00AF6344 /* VideoToolbox.framework */,
+				3311BFC21E826F5800AF6344 /* UIKit.framework */,
+				3311BFC01E826F5400AF6344 /* QuartzCore.framework */,
+				3311BFBE1E826F4D00AF6344 /* OpenGLES.framework */,
+				3311BFBC1E826F3900AF6344 /* MediaPlayer.framework */,
+				3311BFBA1E826F3200AF6344 /* MobileCoreServices.framework */,
+				3311BFB81E826F2B00AF6344 /* CoreVideo.framework */,
+				3311BFB61E826F2000AF6344 /* CoreMedia.framework */,
+				3311BFB41E826F1600AF6344 /* AVFoundation.framework */,
+				3311BFB21E826F0F00AF6344 /* AudioToolbox.framework */,
+				3311BFB01E826F0900AF6344 /* libz.tbd */,
+				3311BFAE1E826F0300AF6344 /* CoreGraphics.framework */,
 				22ACF4148482DF453BBF4795 /* Pods_SwiftLive.framework */,
 			);
 			name = Frameworks;
@@ -211,6 +305,7 @@
 				33BD59831E8251D700AE1E60 /* LaunchScreen.storyboard in Resources */,
 				33BD59801E8251D700AE1E60 /* Assets.xcassets in Resources */,
 				33BD599F1E825DAF00AE1E60 /* HomeCell.xib in Resources */,
+				3311BFAD1E826D6C00AF6344 /* LiveViewController.xib in Resources */,
 				33BD597E1E8251D700AE1E60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +369,7 @@
 				33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */,
 				33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */,
 				33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */,
+				3311BFAC1E826D6C00AF6344 /* LiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
