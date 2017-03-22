@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Just
+import Kingfisher
 
 class HomeViewController: UIViewController {
 
@@ -25,6 +27,13 @@ class HomeViewController: UIViewController {
 
     func loadList() {
         
+        Just.post(liveListUrl) { r in
+            guard let json = r.json as? NSDictionary else {
+                return
+            }
+            
+            
+        }
     }
 
     
