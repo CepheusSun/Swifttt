@@ -264,6 +264,7 @@
 				33BD59731E8251D700AE1E60 /* Resources */,
 				849C5FC9C7984206E07D52E8 /* [CP] Embed Pods Frameworks */,
 				43417FAE476CFA2197CFCDC8 /* [CP] Copy Pods Resources */,
+				336E8B041E82E4EC00C94A1E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -325,6 +326,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		336E8B041E82E4EC00C94A1E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
 		43417FAE476CFA2197CFCDC8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
