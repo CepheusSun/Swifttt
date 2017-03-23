@@ -18,10 +18,10 @@ class HomeController:  WMPageController{
         self.titleSizeSelected   = 13.0;
         self.titleSizeNormal     = 13.0;
         self.menuHeight          = 47;
-        self.selectIndex        = 0;
-        self.progressHeight     = 2;
-        self.progressWidth      = 39;
-        self.preloadPolicy      = .neighbour;
+        self.selectIndex         = 0;
+        self.progressHeight      = 2;
+        self.progressWidth       = 39;
+        self.preloadPolicy       = .neighbour;
         self.setupNavigatonBar()
     }
     
