@@ -8,7 +8,6 @@ target 'SwiftLive' do
   # Pods for SwiftLive
 
 
-pod 'Just'
 pod 'Kingfisher'
 pod 'WMPageController'
 pod 'Alamofire'

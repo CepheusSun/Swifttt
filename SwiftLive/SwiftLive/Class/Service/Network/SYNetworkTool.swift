@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import ReachabilitySwift
-import Just
 
 /// 请求响应状态
 ///
@@ -58,8 +57,6 @@ extension SYNetworkTool {
             .responseJSON { (response) in
             self.handle(response: response, finished: finished)
         }
-
-        
     }
     
     /// POST 请求
