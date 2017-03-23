@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Reachability
+
 /// 请求响应状态
 ///
 /// - success: 响应成功  - 成功

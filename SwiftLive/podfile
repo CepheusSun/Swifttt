@@ -14,4 +14,7 @@ pod 'WMPageController'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Reachability'
+pod 'RxSwift'
+pod 'RxCocoa'
+
 end
