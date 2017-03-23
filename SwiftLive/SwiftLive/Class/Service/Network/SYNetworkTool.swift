@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import Reachability
+import ReachabilitySwift
 
 /// 请求响应状态
 ///
@@ -29,9 +29,14 @@ typealias NetworkFinished = (_ status: SYResponseStatus, _ result: JSON?, _ tipS
 
 class SYNetworkTool: NSObject {
     
+    var connectionState: Int = 0
     /// 网络工具单例
     static let shared = SYNetworkTool()
     
+    override init() {
+        super.init()
+        self.startMonitor()
+    }
 }
 
 // MARK: - 基础请求方法
@@ -117,8 +122,28 @@ extension SYNetworkTool {
 
 // MARK: 网络工具方法
 extension SYNetworkTool {
-    func currentNetworkState() -> Int {
-        return Reachability.forInternetConnection().currentReachabilityStatus().rawValue
+    
+    func startMonitor() {
+        let reachability = Reachability()!
+        reachability.whenReachable = { reachability in
+            DispatchQueue.main.async {
+                if reachability.isReachableViaWiFi {
+                    self.connectionState = 1
+                } else {
+                    self.connectionState = 2
+                }
+            }
+        }
+        reachability.whenUnreachable = { reachability in
+            DispatchQueue.main.async {
+                self.connectionState = 3
+            }
+        }
+        do {
+            try reachability.startNotifier()
+        } catch {
+            
+        }
     }
 }
 
