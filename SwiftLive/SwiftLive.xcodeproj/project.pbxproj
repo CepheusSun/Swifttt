@@ -38,7 +38,7 @@
 		33C8A9271E83851700AE94F4 /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9261E83851700AE94F4 /* AppCommon.swift */; };
 		33C8A92A1E8385E600AE94F4 /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9291E8385E600AE94F4 /* MNavigationController.swift */; };
 		33C8A92C1E83954800AE94F4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C8A92B1E83954800AE94F4 /* HomeViewController.xib */; };
-		33C8A9301E839DEC00AE94F4 /* SYNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A92F1E839DEC00AE94F4 /* SYNetworkTool.swift */; };
+		33C8A9381E83A67200AE94F4 /* SYNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +75,7 @@
 		33C8A9261E83851700AE94F4 /* AppCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
 		33C8A9291E8385E600AE94F4 /* MNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
 		33C8A92B1E83954800AE94F4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		33C8A92F1E839DEC00AE94F4 /* SYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNetworkTool.swift; sourceTree = "<group>"; };
+		33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNetworkTool.swift; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
 		FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +183,7 @@
 		33BD598A1E8254F000AE1E60 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				33C8A92E1E839D6A00AE94F4 /* Network */,
+				33C8A9311E83A65500AE94F4 /* Service */,
 				33C8A9281E8385D600AE94F4 /* Base */,
 				3311BFCA1E8273DF00AF6344 /* Color+Extension.swift */,
 				33C8A9261E83851700AE94F4 /* AppCommon.swift */,
@@ -247,13 +247,20 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		33C8A92E1E839D6A00AE94F4 /* Network */ = {
+		33C8A9311E83A65500AE94F4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				33C8A92F1E839DEC00AE94F4 /* SYNetworkTool.swift */,
+				33C8A9321E83A65500AE94F4 /* Network */,
 			);
-			name = Network;
-			path = Service/Network;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		33C8A9321E83A65500AE94F4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		7AD020E763D9715C1FAD55E2 /* Pods */ = {
@@ -438,7 +445,7 @@
 				3311BFD11E827CCC00AF6344 /* PresentPushAnimation.swift in Sources */,
 				33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */,
 				33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */,
-				33C8A9301E839DEC00AE94F4 /* SYNetworkTool.swift in Sources */,
+				33C8A9381E83A67200AE94F4 /* SYNetworkTool.swift in Sources */,
 				3311BFAC1E826D6C00AF6344 /* LiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
