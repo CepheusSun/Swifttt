@@ -25,6 +25,7 @@ UIViewControllerTransitioningDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
+        self.tableView.tableFooterView = UIView()
         self.bindViewModel()
     }
     
@@ -35,10 +36,16 @@ UIViewControllerTransitioningDelegate{
             [weak self] in
             
             
-            
             self?.tableView.es_stopPullToRefresh()
-            self?.tableView.es_stopPullToRefresh(ignoreDate: true, ignoreFooter: false)
+            self?.tableView.es_stopPullToRefresh(ignoreDate: false, ignoreFooter: true)
         }
+        
+        self.tableView.es_addInfiniteScrolling {
+            [weak self] in
+            self?.tableView.es_stopLoadingMore()
+            
+        }
+        
         
     }
 
