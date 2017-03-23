@@ -45,7 +45,7 @@ extension SYNetworkTool {
     func get(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) {
         Alamofire.request("\(BASE_URL)\(APIString)",
                     method: .get,
-                    parameters: parameters,
+                    parameters: self.appendPublicParameters(parameters),
                     headers: nil)
             .responseJSON { (response) in
             self.handle(response: response, finished: finished)
@@ -61,7 +61,7 @@ extension SYNetworkTool {
     func post(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) {
         Alamofire.request("\(BASE_URL)\(APIString)",
                 method: .post,
-                parameters: parameters,
+                parameters: self.appendPublicParameters(parameters),
                 headers: nil)
             .responseJSON { (response) in
             self.handle(response: response, finished: finished)
@@ -77,10 +77,11 @@ extension SYNetworkTool {
         switch response.result {
         case .success(let value):
             let json = JSON(value)
-            if json["err_msg"].string == "success" {
+            print("json \(json)")
+            if json["dm_error"].int == 0 {
                 finished(.success, json, nil)
             }else {
-                finished(.unusual, json, nil)
+                finished(.unusual, nil, json["error_msg"].string)
             }
         case .failure(let error):
             finished(.failure, nil, error.localizedDescription)
@@ -91,16 +92,23 @@ extension SYNetworkTool {
     ///
     /// - Parameter parameters: 原始参数
     /// - Returns: 完整参数
-    private func appendPublicParameters(_ parameters: [String: Any]?) -> [String: Any]! {
+    private func appendPublicParameters(_ parameters: [String: Any]!) -> [String: Any]! {
         var res = parameters
         
         res?["gps_info"] = SYLocationTool.shared.gps_info_string()
         res?["loc_info"] = SYLocationTool.shared.loc_info_string()
-        res?["cv"] = "IK\(SYDevice.device.app_version())_Iphone"
+        res?["cv"] = "IK\(SYDevice.device.app_version()!)_Iphone"
         res?["idfv"] = SYDevice.device.idfvString()
         res?["idfa"] = SYDevice.device.idfaString()
-        res?["osversion"] = "ios_\(SYDevice.device.os_version())"
+        res?["osversion"] = "ios_\(SYDevice.device.os_version()!)"
+        res?["imsi"] = ""
+        res?["imei"] = ""
+        res?["ua"] = SYDevice.device.device_name()
         
+        res?["uid"] = "17800399"
+        res?["count"] = "5"
+        
+        print(res!)
         return res
     }
     

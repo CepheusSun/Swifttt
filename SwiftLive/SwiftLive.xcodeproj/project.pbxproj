@@ -41,6 +41,7 @@
 		33C8A9381E83A67200AE94F4 /* SYNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */; };
 		33C8A93B1E83A6A200AE94F4 /* SYLocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */; };
 		33C8A93E1E83B22500AE94F4 /* SYDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93D1E83B22500AE94F4 /* SYDevice.swift */; };
+		33C8A9401E83CA9800AE94F4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93F1E83CA9800AE94F4 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNetworkTool.swift; sourceTree = "<group>"; };
 		33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYLocationTool.swift; sourceTree = "<group>"; };
 		33C8A93D1E83B22500AE94F4 /* SYDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYDevice.swift; sourceTree = "<group>"; };
+		33C8A93F1E83CA9800AE94F4 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
 		FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 		33BD598F1E8254F000AE1E60 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				33C8A93F1E83CA9800AE94F4 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				33BD59A11E8260AD00AE1E60 /* HomeModel.swift in Sources */,
 				3311BFCB1E8273DF00AF6344 /* Color+Extension.swift in Sources */,
 				3311BFCD1E8273EB00AF6344 /* emmitParticles.swift in Sources */,
+				33C8A9401E83CA9800AE94F4 /* HomeViewModel.swift in Sources */,
 				3311BFC91E8273D700AF6344 /* HeartFlayView.swift in Sources */,
 				33C8A9271E83851700AE94F4 /* AppCommon.swift in Sources */,
 				33C8A9221E836CE400AE94F4 /* HomeController.swift in Sources */,
