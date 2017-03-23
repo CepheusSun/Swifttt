@@ -10,16 +10,14 @@ import UIKit
 
 class HomeViewModel: NSObject {
     
-    
-    
-    
+    var data:[Any] = []
     
     
     
     
     func loadHotList() {
         SYNetworkTool.shared.get("live/gettop", parameters: [:]) { (status, resp, des) in
-            
+
         }
     }
 }

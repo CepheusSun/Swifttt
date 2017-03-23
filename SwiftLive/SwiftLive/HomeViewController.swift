@@ -29,10 +29,14 @@ UIViewControllerTransitioningDelegate{
         self.bindViewModel()
     }
     
+    
+    var viewModel: HomeViewModel = HomeViewModel()
     func bindViewModel() {
         
         
-        self.tableView.es_addPullToRefresh {
+        
+        
+        tableView.es_addPullToRefresh {
             [weak self] in
             
             
@@ -40,7 +44,7 @@ UIViewControllerTransitioningDelegate{
             self?.tableView.es_stopPullToRefresh(ignoreDate: false, ignoreFooter: true)
         }
         
-        self.tableView.es_addInfiniteScrolling {
+        tableView.es_addInfiniteScrolling {
             [weak self] in
             self?.tableView.es_stopLoadingMore()
             

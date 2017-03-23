@@ -4,9 +4,6 @@ PODS:
   - Just (0.5.7)
   - Kingfisher (3.5.2)
   - ReachabilitySwift (3)
-  - RxCocoa (3.2.0):
-    - RxSwift (~> 3.1)
-  - RxSwift (3.2.0)
   - SwiftyJSON (3.1.4)
   - WMPageController (2.2.1)
 
@@ -16,8 +13,6 @@ DEPENDENCIES:
   - Just
   - Kingfisher
   - ReachabilitySwift
-  - RxCocoa
-  - RxSwift
   - SwiftyJSON
   - WMPageController
 
@@ -27,11 +22,9 @@ SPEC CHECKSUMS:
   Just: d19e769d86b965e39ae58cb3c0cbad07706634a8
   Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
-  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
 
-PODFILE CHECKSUM: c06dbab1ccfb31c4d71af57728e36767494c8c70
+PODFILE CHECKSUM: 682918343df901c5caf31d65835856f68ae42f86
 
 COCOAPODS: 1.2.1.beta.1
