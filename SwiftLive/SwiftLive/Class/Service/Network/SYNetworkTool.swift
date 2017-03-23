@@ -93,9 +93,10 @@ extension SYNetworkTool {
     /// - Returns: 完整参数
     private func appendPublicParameters(_ parameters: [String: Any]?) -> [String: Any]! {
         var res = parameters
-        res?["a"] = "a"
         
-        return parameters!
+        res?["gps_info"] = SYLocationTool.shared.gps_info_string()
+        res?["loc_info"] = SYLocationTool.shared.loc_info_string()
+        return res
     }
     
 }

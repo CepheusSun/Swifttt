@@ -27,6 +27,14 @@ class SYLocationTool: NSObject, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
     }
+    
+    public func gps_info_string() -> String! {
+        return "\(myLatitude)%2C\(myLongitude)"
+    }
+    
+    public func loc_info_string() -> String! {
+        return "\(isoCountryCode),\(area),\(locality)"
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -76,13 +84,14 @@ extension SYLocationTool {
             
             myLongitude = (containsPlacemark.location!.coordinate.longitude)
             myLatitude = (containsPlacemark.location!.coordinate.latitude)
-            
+/*
             // testing show data
             print("Locality: \(locality)")
             print("Area: \(area)")
             print("Country: \(isoCountryCode)")
             print(myLatitude)
             print(myLongitude)
+ */
         }
     }
 }
