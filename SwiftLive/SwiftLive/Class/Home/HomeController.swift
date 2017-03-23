@@ -13,25 +13,42 @@ class HomeController:  WMPageController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.menuViewStyle       = .line;
+        self.menuViewStyle       = .line
         self.showOnNavigationBar = true
-        self.titleSizeSelected   = 13.0;
-        self.titleSizeNormal     = 13.0;
-        self.menuHeight          = 47;
-        self.selectIndex         = 0;
-        self.progressHeight      = 2;
-        self.progressWidth       = 39;
-        self.preloadPolicy       = .neighbour;
+        self.menuHeight          = 47
+        self.menuItemWidth       = 50
+        self.selectIndex         = 1
+        self.progressHeight      = 10
+        self.progressWidth       = 20
+        self.preloadPolicy       = .neighbour
+        self.titleColorNormal   = UIColor.white
+        self.titleColorSelected = UIColor.white
+        self.progressColor      = UIColor.white
+        self.progressViewBottomSpace   = 10
+        self.progressViewCornerRadius  = 5
+        self.itemMargin                = 0
+        self.menuView?.backgroundColor = UIColor.clear
         self.setupNavigatonBar()
+        self.reloadData()
     }
     
     func setupNavigatonBar() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(presentToSearch))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "message"),
+                                                                 style: .plain,
+                                                                 target: self,
+                                                                 action: #selector(presentToMessage))
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(presentToSearch))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "search"),
+                                                                style: .plain,
+                                                                target: self,
+                                                                action: #selector(presentToSearch))
     }
 
     func presentToSearch() {
+        
+    }
+    
+    func presentToMessage() {
         
     }
     

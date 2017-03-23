@@ -12,8 +12,8 @@ class MNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        self.navigationBar.barTintColor = THEME_COLOR
+        self.navigationBar.tintColor = UIColor.white
     }
 
 
