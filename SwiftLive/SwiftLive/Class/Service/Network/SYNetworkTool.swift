@@ -21,6 +21,7 @@ enum SYResponseStatus: Int {
     case failure = 3
 }
 
+let BASE_URL = "http://service.ingkee.com/api/"
 
 /// 网络请求回掉闭包 status:响应状态 result:JSON tipString: 提示给用户的信息
 typealias NetworkFinished = (_ status: SYResponseStatus, _ result: JSON?, _ tipString: String?) -> ()
@@ -35,14 +36,34 @@ class SYNetworkTool: NSObject {
 // MARK: - 基础请求方法
 extension SYNetworkTool {
     
+    /// GET 请求
+    ///
+    /// - Parameters:
+    ///   - APIString: urlSting
+    ///   - parameters: 参数
+    ///   - finished: 回调用
     func get(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) {
-        Alamofire.request(APIString, method: .get, parameters: parameters, headers: nil).responseJSON { (response) in
+        Alamofire.request("\(BASE_URL)\(APIString)",
+                    method: .get,
+                    parameters: parameters,
+                    headers: nil)
+            .responseJSON { (response) in
             self.handle(response: response, finished: finished)
         }
     }
     
+    /// POST 请求
+    ///
+    /// - Parameters:
+    ///   - APIString: urlSting
+    ///   - parameters: 参数
+    ///   - finished: 回调用
     func post(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) {
-        Alamofire.request(APIString, method: .post, parameters: parameters, headers: nil).responseJSON { (response) in
+        Alamofire.request("\(BASE_URL)\(APIString)",
+                method: .post,
+                parameters: parameters,
+                headers: nil)
+            .responseJSON { (response) in
             self.handle(response: response, finished: finished)
         }
     }
@@ -65,6 +86,18 @@ extension SYNetworkTool {
             finished(.failure, nil, error.localizedDescription)
         }
     }
+    
+    /// 参数处理,拼接共有参数
+    ///
+    /// - Parameter parameters: 原始参数
+    /// - Returns: 完整参数
+    private func appendPublicParameters(_ parameters: [String: Any]?) -> [String: Any]! {
+        var res = parameters
+        res?["a"] = "a"
+        
+        return parameters!
+    }
+    
 }
 
 // MARK: 网络工具方法
