@@ -27,26 +27,6 @@ UIViewControllerTransitioningDelegate{
         self.loadList()
         self.tableView.refreshControl = UIRefreshControl()
         self.tableView.refreshControl?.addTarget(self, action: #selector(loadList), for: .valueChanged)
-        
-        self .setupPushStreamButton()
-    }
-    
-    func setupPushStreamButton() {
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: UIScreen.main.bounds.size.width - 100,
-                              y:  UIScreen.main.bounds.size.height - 100,
-                              width: 60,
-                              height: 60)
-        
-        button.addTarget(self, action: #selector(pushToStreamPage(sender:)), for: .touchUpInside)
-        button.setBackgroundImage(#imageLiteral(resourceName: "add"), for: .normal)
-        view.addSubview(button)
-    }
-    
-    
-    // 推流相关操作
-    func pushToStreamPage(sender: UIButton) {
-        
     }
 
     func loadList() {
