@@ -62,7 +62,7 @@ UIViewControllerTransitioningDelegate{
                                  viewers: live.object(forKey: "online_users") as! Int,
                                  url: live.object(forKey: "stream_addr") as! String)
             })
-            
+
             OperationQueue.main.addOperation {
                 self.tableView.refreshControl?.endRefreshing()
                 self.tableView.reloadData()
@@ -102,20 +102,3 @@ UIViewControllerTransitioningDelegate{
     }
     
 }
-    //TODO: 处理图片颜色问题
-/*
-extension UIImage {
-    func tint(color: UIColor, blendMode: CGBlendMode) -> UIImage {
-        let drawRect = CGRectMake(0.0, 0.0, size.width, size.height)
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        //let context = UIGraphicsGetCurrentContext()
-        //CGContextClipToMask(context, drawRect, CGImage)
-        color.setFill()
-        UIRectFill(drawRect)
-        drawInRect(drawRect, blendMode: blendMode, alpha: 1.0)
-        let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return tintedImage
-    }
-}
-*/

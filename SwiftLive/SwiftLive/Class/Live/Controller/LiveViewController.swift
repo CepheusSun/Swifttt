@@ -109,7 +109,7 @@ class LiveViewController: UIViewController {
     
     @IBAction func tapLike(_ sender: UIButton) {
         
-        let heart = HeartFlayView(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
+        let heart = HeartFlayView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         
         heart.center = CGPoint(x: btnLike.frame.origin.x, y: btnLike.frame.origin.y)
         view.addSubview(heart)
@@ -128,4 +128,3 @@ class LiveViewController: UIViewController {
     }
 
 }
-

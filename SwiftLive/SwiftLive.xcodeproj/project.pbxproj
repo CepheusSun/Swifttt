@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281F1378985A50F8A26BBC94 /* Pods_SwiftLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */; };
 		3311BFAC1E826D6C00AF6344 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311BFAA1E826D6C00AF6344 /* LiveViewController.swift */; };
 		3311BFAD1E826D6C00AF6344 /* LiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3311BFAB1E826D6C00AF6344 /* LiveViewController.xib */; };
 		3311BFAF1E826F0300AF6344 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3311BFAE1E826F0300AF6344 /* CoreGraphics.framework */; };
@@ -29,11 +30,12 @@
 		33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD59781E8251D700AE1E60 /* AppDelegate.swift */; };
 		33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD597A1E8251D700AE1E60 /* HomeViewController.swift */; };
 		33BD597E1E8251D700AE1E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD597C1E8251D700AE1E60 /* Main.storyboard */; };
-		33BD59801E8251D700AE1E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33BD597F1E8251D700AE1E60 /* Assets.xcassets */; };
 		33BD59831E8251D700AE1E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD59811E8251D700AE1E60 /* LaunchScreen.storyboard */; };
 		33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD599C1E825DAF00AE1E60 /* HomeCell.swift */; };
 		33BD599F1E825DAF00AE1E60 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BD599D1E825DAF00AE1E60 /* HomeCell.xib */; };
 		33BD59A11E8260AD00AE1E60 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD59A01E8260AD00AE1E60 /* HomeModel.swift */; };
+		33C8A9201E835A9F00AE94F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C8A91F1E835A9F00AE94F4 /* Assets.xcassets */; };
+		33C8A9221E836CE400AE94F4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9211E836CE400AE94F4 /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,14 +62,17 @@
 		33BD59781E8251D700AE1E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33BD597A1E8251D700AE1E60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../HomeViewController.swift; sourceTree = "<group>"; };
 		33BD597D1E8251D700AE1E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		33BD597F1E8251D700AE1E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33BD59821E8251D700AE1E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33BD59841E8251D700AE1E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33BD599C1E825DAF00AE1E60 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		33BD599D1E825DAF00AE1E60 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		33BD59A01E8260AD00AE1E60 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		33C8A91F1E835A9F00AE94F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33C8A9211E836CE400AE94F4 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		33C8A9231E836D6C00AE94F4 /* SwiftLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLive-Bridging-Header.h"; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
+		FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,7 @@
 				3311BFB31E826F0F00AF6344 /* AudioToolbox.framework in Frameworks */,
 				3311BFB11E826F0900AF6344 /* libz.tbd in Frameworks */,
 				3311BFAF1E826F0300AF6344 /* CoreGraphics.framework in Frameworks */,
+				281F1378985A50F8A26BBC94 /* Pods_SwiftLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +167,8 @@
 			children = (
 				33BD598A1E8254F000AE1E60 /* Class */,
 				33BD59781E8251D700AE1E60 /* AppDelegate.swift */,
+				33C8A91F1E835A9F00AE94F4 /* Assets.xcassets */,
 				33BD597C1E8251D700AE1E60 /* Main.storyboard */,
-				33BD597F1E8251D700AE1E60 /* Assets.xcassets */,
 				33BD59811E8251D700AE1E60 /* LaunchScreen.storyboard */,
 				33BD59841E8251D700AE1E60 /* Info.plist */,
 			);
@@ -186,6 +192,8 @@
 				33BD598D1E8254F000AE1E60 /* Model */,
 				33BD598E1E8254F000AE1E60 /* View */,
 				33BD598F1E8254F000AE1E60 /* ViewModel */,
+				33C8A9211E836CE400AE94F4 /* HomeController.swift */,
+				33C8A9231E836D6C00AE94F4 /* SwiftLive-Bridging-Header.h */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				3311BFB21E826F0F00AF6344 /* AudioToolbox.framework */,
 				3311BFB01E826F0900AF6344 /* libz.tbd */,
 				3311BFAE1E826F0300AF6344 /* CoreGraphics.framework */,
+				FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,6 +297,7 @@
 					33BD59741E8251D700AE1E60 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 552B69TXM9;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -316,10 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				33BD59831E8251D700AE1E60 /* LaunchScreen.storyboard in Resources */,
-				33BD59801E8251D700AE1E60 /* Assets.xcassets in Resources */,
 				33BD599F1E825DAF00AE1E60 /* HomeCell.xib in Resources */,
 				3311BFAD1E826D6C00AF6344 /* LiveViewController.xib in Resources */,
 				33BD597E1E8251D700AE1E60 /* Main.storyboard in Resources */,
+				33C8A9201E835A9F00AE94F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +347,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+			shellScript = "TAGS=\"DO:|FIX:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
 		};
 		43417FAE476CFA2197CFCDC8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -395,6 +405,7 @@
 				3311BFCB1E8273DF00AF6344 /* Color+Extension.swift in Sources */,
 				3311BFCD1E8273EB00AF6344 /* emmitParticles.swift in Sources */,
 				3311BFC91E8273D700AF6344 /* HeartFlayView.swift in Sources */,
+				33C8A9221E836CE400AE94F4 /* HomeController.swift in Sources */,
 				33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */,
 				3311BFD11E827CCC00AF6344 /* PresentPushAnimation.swift in Sources */,
 				33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */,
@@ -521,6 +532,7 @@
 			baseConfigurationReference = 79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 552B69TXM9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,6 +542,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.SwiftLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLive/Class/Home/SwiftLive-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -539,6 +553,7 @@
 			baseConfigurationReference = BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 552B69TXM9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,6 +563,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.SwiftLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLive/Class/Home/SwiftLive-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

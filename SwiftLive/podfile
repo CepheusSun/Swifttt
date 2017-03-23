@@ -10,4 +10,6 @@ target 'SwiftLive' do
 
 pod 'Just'
 pod 'Kingfisher'
+pod 'WMPageController'
+
 end
