@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import ReachabilitySwift
+import Just
 
 /// 请求响应状态
 ///
@@ -24,7 +25,7 @@ enum SYResponseStatus: Int {
 
 let BASE_URL = "http://service.ingkee.com/api/"
 
-/// 网络请求回掉闭包 status:响应状态 result:JSON tipString: 提示给用户的信息
+/// 网络请求回调闭包 status:响应状态 result:JSON tipString: 提示给用户的信息
 typealias NetworkFinished = (_ status: SYResponseStatus, _ result: JSON?, _ tipString: String?) -> ()
 
 class SYNetworkTool: NSObject {
@@ -57,6 +58,8 @@ extension SYNetworkTool {
             .responseJSON { (response) in
             self.handle(response: response, finished: finished)
         }
+
+        
     }
     
     /// POST 请求
