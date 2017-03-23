@@ -23,6 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         _ = SYLocationTool.shared
         
+        
+        
+        var res: [String :Any] = [:]
+        
+        res["gps_info"] = SYLocationTool.shared.gps_info_string()
+        res["loc_info"] = SYLocationTool.shared.loc_info_string()
+        res["cv"] = "IK\(SYDevice.device.os_version())_Iphone"
+        res["idfv"] = SYDevice.device.idfvString()
+        res["idfa"] = SYDevice.device.idfaString()
+        res["osversion"] = "ios_\(SYDevice.device.os_version()!)"
+        res["imsi"] = ""
+        res["imei"] = ""
+        res["ua"] = SYDevice.device.device_name()
+        dump(res)
         return true
     }
 

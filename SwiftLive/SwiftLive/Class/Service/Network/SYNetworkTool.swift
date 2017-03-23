@@ -96,6 +96,11 @@ extension SYNetworkTool {
         
         res?["gps_info"] = SYLocationTool.shared.gps_info_string()
         res?["loc_info"] = SYLocationTool.shared.loc_info_string()
+        res?["cv"] = "IK\(SYDevice.device.app_version())_Iphone"
+        res?["idfv"] = SYDevice.device.idfvString()
+        res?["idfa"] = SYDevice.device.idfaString()
+        res?["osversion"] = "ios_\(SYDevice.device.os_version())"
+        
         return res
     }
     
