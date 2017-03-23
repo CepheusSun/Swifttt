@@ -9,6 +9,7 @@
 import UIKit
 import Just
 import Kingfisher
+import ESPullToRefresh
 
 class HomeViewController: UIViewController ,
 UITableViewDelegate,
@@ -30,7 +31,14 @@ UIViewControllerTransitioningDelegate{
     func bindViewModel() {
         
         
-        
+        self.tableView.es_addPullToRefresh {
+            [weak self] in
+            
+            
+            
+            self?.tableView.es_stopPullToRefresh()
+            self?.tableView.es_stopPullToRefresh(ignoreDate: true, ignoreFooter: false)
+        }
         
     }
 

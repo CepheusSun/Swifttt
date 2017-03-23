@@ -34,7 +34,8 @@ class SYNetworkTool: NSObject {
     static let shared = SYNetworkTool()
     
     override init() {
-        super.init()
+        super.init() 
+        
         self.startMonitor()
     }
 }

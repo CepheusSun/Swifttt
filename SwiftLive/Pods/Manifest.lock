@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - ESPullToRefresh (2.6)
   - Just (0.5.7)
   - Kingfisher (3.5.2)
   - ReachabilitySwift (3)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - ESPullToRefresh
   - Just
   - Kingfisher
   - ReachabilitySwift
@@ -21,6 +23,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   Just: d19e769d86b965e39ae58cb3c0cbad07706634a8
   Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
@@ -29,6 +32,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
 
-PODFILE CHECKSUM: 07c27ceb0731130498b00da1a7d97977034bc4a7
+PODFILE CHECKSUM: c06dbab1ccfb31c4d71af57728e36767494c8c70
 
 COCOAPODS: 1.2.1.beta.1
