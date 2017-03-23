@@ -39,6 +39,7 @@
 		33C8A92A1E8385E600AE94F4 /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9291E8385E600AE94F4 /* MNavigationController.swift */; };
 		33C8A92C1E83954800AE94F4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C8A92B1E83954800AE94F4 /* HomeViewController.xib */; };
 		33C8A9381E83A67200AE94F4 /* SYNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */; };
+		33C8A93B1E83A6A200AE94F4 /* SYLocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		33C8A9291E8385E600AE94F4 /* MNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
 		33C8A92B1E83954800AE94F4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNetworkTool.swift; sourceTree = "<group>"; };
+		33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYLocationTool.swift; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
 		FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 		33C8A9311E83A65500AE94F4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				33C8A9391E83A69400AE94F4 /* Location */,
 				33C8A9321E83A65500AE94F4 /* Network */,
 			);
 			path = Service;
@@ -261,6 +264,14 @@
 				33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		33C8A9391E83A69400AE94F4 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		7AD020E763D9715C1FAD55E2 /* Pods */ = {
@@ -442,6 +453,7 @@
 				33C8A9221E836CE400AE94F4 /* HomeController.swift in Sources */,
 				33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */,
 				33C8A92A1E8385E600AE94F4 /* MNavigationController.swift in Sources */,
+				33C8A93B1E83A6A200AE94F4 /* SYLocationTool.swift in Sources */,
 				3311BFD11E827CCC00AF6344 /* PresentPushAnimation.swift in Sources */,
 				33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */,
 				33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */,
@@ -567,6 +579,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SwiftLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.SwiftLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,6 +601,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SwiftLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.SwiftLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";

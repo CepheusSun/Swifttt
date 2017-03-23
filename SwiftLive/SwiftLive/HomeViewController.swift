@@ -25,8 +25,8 @@ UIViewControllerTransitioningDelegate{
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         self.loadList()
-        self.tableView.refreshControl = UIRefreshControl()
-        self.tableView.refreshControl?.addTarget(self, action: #selector(loadList), for: .valueChanged)
+//        self.tableView.refreshControl = UIRefreshControl()
+//        self.tableView.refreshControl?.addTarget(self, action: #selector(loadList), for: .valueChanged)
     }
 
     func loadList() {
@@ -44,7 +44,7 @@ UIViewControllerTransitioningDelegate{
             })
 
             OperationQueue.main.addOperation {
-                self.tableView.refreshControl?.endRefreshing()
+//                self.tableView.refreshControl?.endRefreshing()
                 self.tableView.reloadData()
             }
         }

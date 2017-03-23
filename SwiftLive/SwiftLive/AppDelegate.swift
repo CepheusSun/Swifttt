@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = MNavigationController(rootViewController: HomeController.controller())
         self.window?.makeKeyAndVisible()
         
+    
+        _ = SYLocationTool.shared
+        
         return true
     }
 
