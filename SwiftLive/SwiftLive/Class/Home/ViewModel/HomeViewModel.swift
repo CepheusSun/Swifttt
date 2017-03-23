@@ -17,7 +17,14 @@ class HomeViewModel: NSObject {
     
     func loadHotList() {
         SYNetworkTool.shared.get("live/gettop", parameters: [:]) { (status, resp, des) in
-
+            
+            
+            
+            dump(resp)
+            
+            
+            
+            
         }
     }
 }

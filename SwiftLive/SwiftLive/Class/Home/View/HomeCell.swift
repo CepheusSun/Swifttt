@@ -21,19 +21,20 @@ class HomeCell: UITableViewCell {
     
     @IBOutlet weak var bigImageView: UIImageView!
     
-    var model: HomeModel! {
+    var model: HomeLiveModel! {
         didSet {
-            if !model.portrait.hasPrefix("http") {
-                model.portrait = "http://img2.inke.cn/\(model.portrait)"
+            if !model.creator.portrait.hasPrefix("http") {
+                model.creator.portrait = "http://img2.inke.cn/\(model.creator.portrait)"
             }
-            let imgUrl = URL(string: (model.portrait))
+            let imgUrl = URL(string: (model.creator.portrait))
             self.avatorImageview.kf.setImage(with: imgUrl)
-            self.addressLabel.text = model.location.isEmpty ? "": model.location
-            self.viewerCountLabel.text = "\(model.viewers)"
+            self.addressLabel.text = model.creator.location.isEmpty ? "": model.creator.location
+            self.viewerCountLabel.text = "\(model.onlineUsers)"
             self.bigImageView.kf.setImage(with: imgUrl)
-            self.creatorNickName.text = model.nick
+            self.creatorNickName.text = model.creator.nick
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.avatorImageview.layer.masksToBounds = true

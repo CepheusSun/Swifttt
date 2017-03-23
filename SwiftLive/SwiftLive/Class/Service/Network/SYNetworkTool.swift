@@ -111,11 +111,8 @@ extension SYNetworkTool {
         res?["imsi"] = ""
         res?["imei"] = ""
         res?["ua"] = SYDevice.device.device_name()
-        
         res?["uid"] = "17800399"
         res?["count"] = "5"
-        
-        print(res!)
         return res
     }
     

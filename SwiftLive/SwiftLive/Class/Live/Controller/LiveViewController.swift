@@ -11,7 +11,7 @@ import IJKMediaFramework
 
 class LiveViewController: UIViewController {
 
-    var model: HomeModel!
+    var model: HomeLiveModel!
     var playerView: UIView!
     var ijkPlayer: IJKMediaPlayback!
     
@@ -27,10 +27,10 @@ class LiveViewController: UIViewController {
     }
 
     func setBackground() {
-        if !model.portrait.hasPrefix("http") {
-            model.portrait = "http://img2.inke.cn/\(model.portrait)"
+        if !model.creator.portrait.hasPrefix("http") {
+            model.creator.portrait = "http://img2.inke.cn/\(model.creator.portrait)"
         }
-        let imgUrl = URL(string: model.portrait)
+        let imgUrl = URL(string: model.creator.portrait)
         imgBackground.kf.setImage(with: imgUrl)
         let blurEffect = UIBlurEffect(style: .light)
         let effectView = UIVisualEffectView(effect: blurEffect)
@@ -43,7 +43,7 @@ class LiveViewController: UIViewController {
     func setPlayerView() {
         playerView = UIView(frame: UIScreen.main.bounds)
         view.addSubview(playerView)
-        ijkPlayer = IJKFFMoviePlayerController(contentURLString: model.url, with: nil)
+        ijkPlayer = IJKFFMoviePlayerController(contentURLString: model.streamAddr, with: nil)
         let pv = ijkPlayer.view
         pv?.frame = playerView.bounds
         pv?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
