@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct HomeLiveModel {
+struct HomeLiveModel: Mappable {
     
     var city : String!
     var creator : SYCreator!
@@ -35,10 +36,16 @@ struct HomeLiveModel {
     var token : String!
     var version : Int!
     
+    init?(map: Map) {}
+    
+    
+    mutating func mapping(map: Map) {
+        
+    }
 }
 
 
-struct SYCreator {
+struct SYCreator: Mappable {
 
     var birth : String!
     var descriptionField : String!
@@ -59,16 +66,35 @@ struct SYCreator {
     var veriInfo : String!
     var verified : Int!
     var verifiedReason : String!
+    
+    init?(map: Map) {}
+    mutating func mapping(map: Map) {
+        
+    }
 }
 
-struct SYExtra {
+struct SYExtra: Mappable {
     var cover : AnyObject!
     var label : [SYLabel]!
+    
+    init?(map: Map) {}
+    
+    
+    mutating func mapping(map: Map) {
+        
+    }
 }
 
-struct SYLabel {
+struct SYLabel: Mappable {
     
     var cl : [Int]!
     var tabKey : String!
     var tabName : String!
+    
+    init?(map: Map) {}
+    
+    
+    mutating func mapping(map: Map) {
+        
+    }
 }
