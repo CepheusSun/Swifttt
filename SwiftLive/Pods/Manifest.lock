@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.4.0)
   - Just (0.5.7)
   - Kingfisher (3.5.2)
+  - Reachability (3.2)
   - SwiftyJSON (3.1.4)
   - WMPageController (2.2.1)
 
@@ -9,6 +10,7 @@ DEPENDENCIES:
   - Alamofire
   - Just
   - Kingfisher
+  - Reachability
   - SwiftyJSON
   - WMPageController
 
@@ -16,9 +18,10 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Just: d19e769d86b965e39ae58cb3c0cbad07706634a8
   Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
 
-PODFILE CHECKSUM: c54098b5366697b9896023392348a907ece63dc0
+PODFILE CHECKSUM: ee9597c37aaf40057dbc014fc409f5a7fca34889
 
 COCOAPODS: 1.2.1.beta.1

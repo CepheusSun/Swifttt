@@ -13,4 +13,5 @@ pod 'Kingfisher'
 pod 'WMPageController'
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'Reachability'
 end
