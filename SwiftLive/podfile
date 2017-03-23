@@ -11,7 +11,6 @@ target 'SwiftLive' do
 pod 'Kingfisher'
 pod 'WMPageController'
 pod 'Alamofire'
-pod 'SwiftyJSON'
 pod 'ObjectMapper'
 pod 'ReachabilitySwift'
 #pod 'RxSwift'

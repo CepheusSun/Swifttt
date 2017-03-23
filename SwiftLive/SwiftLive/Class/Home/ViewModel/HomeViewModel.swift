@@ -7,26 +7,17 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class HomeViewModel: NSObject {
     
-    var data:[Any] = []
-    
-    
-    
+    var data:[HomeLiveModel] = []
     
     func loadHotList() {
         SYNetworkTool.shared.get("live/gettop", parameters: [:]) { (status, resp, des) in
-            
-            
-            
-            
-            
-            dump(resp)
-            
-            
-            
-            
+            if status == .success {
+                self.data = Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String : Any]])!
+            } 
         }
     }
 }

@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import ReachabilitySwift
 
 /// 请求响应状态
@@ -25,7 +24,7 @@ enum SYResponseStatus: Int {
 let BASE_URL = "http://service.ingkee.com/api/"
 
 /// 网络请求回调闭包 status:响应状态 result:JSON tipString: 提示给用户的信息
-typealias NetworkFinished = (_ status: SYResponseStatus, _ result: JSON?, _ tipString: String?) -> ()
+typealias NetworkFinished = (_ status: SYResponseStatus, _ result: NSDictionary?, _ tipString: String?) -> ()
 
 class SYNetworkTool: NSObject {
     
@@ -83,12 +82,13 @@ extension SYNetworkTool {
     private func handle(response: DataResponse<Any>, finished: @escaping NetworkFinished) {
         switch response.result {
         case .success(let value):
-            let json = JSON(value)
-            print("json \(json)")
-            if json["dm_error"].int == 0 {
-                finished(.success, json, nil)
+            
+            let dictionary = value as! NSDictionary
+            
+            if "\(dictionary["dm_error"]!)" == "0" {
+                finished(.success, dictionary, nil)
             }else {
-                finished(.unusual, nil, json["error_msg"].string)
+                finished(.unusual, nil, dictionary["error_msg"] as? String)
             }
         case .failure(let error):
             finished(.failure, nil, error.localizedDescription)

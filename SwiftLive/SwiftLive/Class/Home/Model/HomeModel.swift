@@ -40,7 +40,30 @@ struct HomeLiveModel: Mappable {
     
     
     mutating func mapping(map: Map) {
-        
+        city <- map["city"]
+        creator <- map["creator"]
+        extra <- map["extra"]
+        group <- map["group"]
+        id <- map["id"]
+        image <- map["image"]
+        landscape <- map["landscape"]
+        like <- map["like"]
+        link <- map["link"]
+        liveType <- map["live_type"]
+        multi <- map["multi"]
+        name <- map["name"]
+        onlineUsers <- map["online_users"]
+        optimal <- map["optimal"]
+        pubStat <- map["pub_stat"]
+        roomId <- map["room_id"]
+        rotate <- map["rotate"]
+        shareAddr <- map["share_addr"]
+        slot <- map["slot"]
+        status <- map["status"]
+        streamAddr <- map["stream_addr"]
+        tagId <- map["tag_id"]
+        token <- map["token"]
+        version <- map["version"]
     }
 }
 
@@ -69,7 +92,26 @@ struct SYCreator: Mappable {
     
     init?(map: Map) {}
     mutating func mapping(map: Map) {
-        
+        birth <- map["birth"]
+        descriptionField <- map["description"]
+        emotion <- map["emotion"]
+        gender <- map["gender"]
+        gmutex <- map["gmutex"]
+        hometown <- map["hometown"]
+        id <- map["id"]
+        inkeVerify <- map["inke_verify"]
+        level <- map["level"]
+        location <- map["location"]
+        nick <- map["nick"]
+        portrait <- map["portrait"]
+        profession <- map["profession"]
+        rankVeri <- map["rank_veri"]
+        sex <- map["sex"]
+        thirdPlatform <- map["third_platform"]
+        veriInfo <- map["veri_info"]
+        verified <- map["verified"]
+        verifiedReason <- map["verified_reason"]
+
     }
 }
 
@@ -81,7 +123,8 @@ struct SYExtra: Mappable {
     
     
     mutating func mapping(map: Map) {
-        
+        cover <- map["cover"]
+        label <- map["label"]
     }
 }
 
@@ -95,6 +138,8 @@ struct SYLabel: Mappable {
     
     
     mutating func mapping(map: Map) {
-        
+        cl <- map["cover"]
+        tabKey <- map["tab_key"]
+        tabName <- map["tab_name"]
     }
 }
