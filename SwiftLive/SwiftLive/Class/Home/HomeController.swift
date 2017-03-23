@@ -13,26 +13,31 @@ class HomeController:  WMPageController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.menuViewStyle       = .line
-        self.showOnNavigationBar = true
-        self.menuHeight          = 47
-        self.menuItemWidth       = 50
-        self.selectIndex         = 1
-        self.progressHeight      = 10
-        self.progressWidth       = 20
-        self.preloadPolicy       = .neighbour
-        self.titleColorNormal   = UIColor.white
-        self.titleColorSelected = UIColor.white
-        self.progressColor      = UIColor.white
-        self.progressViewBottomSpace   = 10
-        self.progressViewCornerRadius  = 5
-        self.itemMargin                = 0
-        self.menuView?.backgroundColor = UIColor.clear
         self.setupNavigatonBar()
-        self.reloadData()
+    }
+    
+    
+    class public func controller() -> HomeController {
+        let vc = HomeController()
+        vc.menuViewStyle       = .line
+        vc.showOnNavigationBar = true
+        vc.menuHeight          = 47
+        vc.menuItemWidth       = 50
+        vc.selectIndex         = 1
+        vc.progressHeight      = 4
+        vc.progressWidth       = 20
+        vc.preloadPolicy       = .neighbour
+        vc.titleColorNormal   = UIColor.white
+        vc.titleColorSelected = UIColor.white
+        vc.progressColor      = UIColor.white
+        vc.progressViewBottomSpace   = 5
+        vc.progressViewCornerRadius  = 2
+        vc.itemMargin                = 0
+        return vc
     }
     
     func setupNavigatonBar() {
+        self.menuView?.backgroundColor = UIColor.clear
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "message"),
                                                                  style: .plain,
                                                                  target: self,
