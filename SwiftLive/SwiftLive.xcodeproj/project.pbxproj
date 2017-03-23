@@ -29,7 +29,6 @@
 		3311BFD11E827CCC00AF6344 /* PresentPushAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311BFD01E827CCC00AF6344 /* PresentPushAnimation.swift */; };
 		33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD59781E8251D700AE1E60 /* AppDelegate.swift */; };
 		33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD597A1E8251D700AE1E60 /* HomeViewController.swift */; };
-		33BD597E1E8251D700AE1E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD597C1E8251D700AE1E60 /* Main.storyboard */; };
 		33BD59831E8251D700AE1E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD59811E8251D700AE1E60 /* LaunchScreen.storyboard */; };
 		33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD599C1E825DAF00AE1E60 /* HomeCell.swift */; };
 		33BD599F1E825DAF00AE1E60 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BD599D1E825DAF00AE1E60 /* HomeCell.xib */; };
@@ -38,6 +37,7 @@
 		33C8A9221E836CE400AE94F4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9211E836CE400AE94F4 /* HomeController.swift */; };
 		33C8A9271E83851700AE94F4 /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9261E83851700AE94F4 /* AppCommon.swift */; };
 		33C8A92A1E8385E600AE94F4 /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9291E8385E600AE94F4 /* MNavigationController.swift */; };
+		33C8A92C1E83954800AE94F4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C8A92B1E83954800AE94F4 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +63,6 @@
 		33BD59751E8251D700AE1E60 /* SwiftLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33BD59781E8251D700AE1E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33BD597A1E8251D700AE1E60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../HomeViewController.swift; sourceTree = "<group>"; };
-		33BD597D1E8251D700AE1E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33BD59821E8251D700AE1E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33BD59841E8251D700AE1E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33BD599C1E825DAF00AE1E60 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		33C8A9231E836D6C00AE94F4 /* SwiftLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLive-Bridging-Header.h"; sourceTree = "<group>"; };
 		33C8A9261E83851700AE94F4 /* AppCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
 		33C8A9291E8385E600AE94F4 /* MNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
+		33C8A92B1E83954800AE94F4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
 		FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +172,6 @@
 				33BD598A1E8254F000AE1E60 /* Class */,
 				33BD59781E8251D700AE1E60 /* AppDelegate.swift */,
 				33C8A91F1E835A9F00AE94F4 /* Assets.xcassets */,
-				33BD597C1E8251D700AE1E60 /* Main.storyboard */,
 				33BD59811E8251D700AE1E60 /* LaunchScreen.storyboard */,
 				33BD59841E8251D700AE1E60 /* Info.plist */,
 			);
@@ -208,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				33BD597A1E8251D700AE1E60 /* HomeViewController.swift */,
+				33C8A92B1E83954800AE94F4 /* HomeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,8 +342,8 @@
 				33BD59831E8251D700AE1E60 /* LaunchScreen.storyboard in Resources */,
 				33BD599F1E825DAF00AE1E60 /* HomeCell.xib in Resources */,
 				3311BFAD1E826D6C00AF6344 /* LiveViewController.xib in Resources */,
-				33BD597E1E8251D700AE1E60 /* Main.storyboard in Resources */,
 				33C8A9201E835A9F00AE94F4 /* Assets.xcassets in Resources */,
+				33C8A92C1E83954800AE94F4 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,14 +433,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		33BD597C1E8251D700AE1E60 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33BD597D1E8251D700AE1E60 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		33BD59811E8251D700AE1E60 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

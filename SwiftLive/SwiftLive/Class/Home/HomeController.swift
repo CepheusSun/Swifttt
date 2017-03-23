@@ -78,6 +78,9 @@ extension HomeController {
     }
     
     override func pageController(_ pageController: WMPageController, viewControllerAt index: Int) -> UIViewController {
+        if index == 1 {
+            return HomeViewController()
+        }
         return UIViewController()
     }
 
