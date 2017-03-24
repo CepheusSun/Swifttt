@@ -24,7 +24,7 @@ enum SYResponseStatus: Int {
 let BASE_URL = "http://service.ingkee.com/api/"
 
 /// 网络请求回调闭包 status:响应状态 result:JSON tipString: 提示给用户的信息
-typealias NetworkFinished = (_ status: SYResponseStatus, _ result: NSDictionary?, _ tipString: String?) -> ()
+typealias NetworkFinished = (_ status: SYResponseStatus, _ result: NSDictionary?, _ error: NSError?) -> ()
 
 class SYNetworkTool: NSObject {
     
@@ -48,8 +48,8 @@ extension SYNetworkTool {
     ///   - APIString: urlSting
     ///   - parameters: 参数
     ///   - finished: 回调用
-    func get(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) {
-        Alamofire.request("\(BASE_URL)\(APIString)",
+    func get(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) -> Request{
+        return Alamofire.request("\(BASE_URL)\(APIString)",
                     method: .get,
                     parameters: self.appendPublicParameters(parameters),
                     headers: nil)
@@ -64,8 +64,8 @@ extension SYNetworkTool {
     ///   - APIString: urlSting
     ///   - parameters: 参数
     ///   - finished: 回调用
-    func post(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) {
-        Alamofire.request("\(BASE_URL)\(APIString)",
+    func post(_ APIString: String, parameters: [String: Any]?, finished: @escaping NetworkFinished) -> Request{
+        return Alamofire.request("\(BASE_URL)\(APIString)",
                 method: .post,
                 parameters: self.appendPublicParameters(parameters),
                 headers: nil)
@@ -78,7 +78,7 @@ extension SYNetworkTool {
     ///
     /// - Parameters:
     ///   - response: 响应对象
-    ///   - finished: 完成回掉
+    ///   - finished: 完成回调
     private func handle(response: DataResponse<Any>, finished: @escaping NetworkFinished) {
         switch response.result {
         case .success(let value):
@@ -88,10 +88,10 @@ extension SYNetworkTool {
             if "\(dictionary["dm_error"]!)" == "0" {
                 finished(.success, dictionary, nil)
             }else {
-                finished(.unusual, nil, dictionary["error_msg"] as? String)
+                finished(.unusual, nil, NSError.init(domain: (dictionary["error_msg"] as? String)!, code: -1024, userInfo: nil))
             }
         case .failure(let error):
-            finished(.failure, nil, error.localizedDescription)
+            finished(.failure, nil, error as NSError?)
         }
     }
     

@@ -9,20 +9,38 @@
 import UIKit
 import ObjectMapper
 import RxSwift
+import RxCocoa
 
-class HomeViewModel: NSObject {
+typealias ResponseInfo = Dictionary<String, [HomeLiveModel]>
+
+class HomeViewModel {
     
-    var data:[HomeLiveModel] = [] {
-        didSet{
+    func loadHotList() -> Observable<ResponseInfo> {
+        
+        return Observable.create {
+            (observer: AnyObserver<ResponseInfo>) -> Disposable in
             
-        }
-    }
-    
-    func loadHotList() {
-        SYNetworkTool.shared.get("live/gettop", parameters: [:]) { (status, resp, des) in
-            if status == .success {
-                self.data = Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String : Any]])!
-            } 
+            let req = SYNetworkTool.shared.get("live/gettop", parameters: [:], finished: { (status, resp, err) in
+                
+                /**
+                 Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String : Any]])!
+                 */
+                switch status {
+                case .success:
+                    let array = Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String: Any]])
+                    observer.onNext(["info": array!])
+                    observer.onCompleted()
+                case .unusual:
+                    observer.onError(err!)
+                case .failure:
+                    observer.onError(err!)
+                }
+            })
+            
+            return Disposables.create {
+                req.cancel()
+            }
+            
         }
     }
 }

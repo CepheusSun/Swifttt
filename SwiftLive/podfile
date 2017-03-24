@@ -14,6 +14,7 @@ pod 'Alamofire'
 pod 'ObjectMapper'
 pod 'ReachabilitySwift'
 pod 'RxSwift'
-#pod 'RxCocoa'
+pod 'RxCocoa'
+pod 'RxDataSources'
 pod 'ESPullToRefresh'
 end

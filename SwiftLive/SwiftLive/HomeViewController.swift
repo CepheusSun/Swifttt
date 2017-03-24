@@ -9,15 +9,25 @@
 import UIKit
 import Kingfisher
 import ESPullToRefresh
+import RxSwift
+import RxCocoa
+import RxDataSources
+
+struct HomeCellSection {
+    var header: String
+    var item: [HomeLiveModel]
+}
+
+
 
 class HomeViewController: UIViewController ,
-UITableViewDelegate,
-UITableViewDataSource,
 UIViewControllerTransitioningDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource: [HomeLiveModel] = []
+    
+    typealias SectionTableModel = SectionModel<String, ResponseInfo>
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +38,47 @@ UIViewControllerTransitioningDelegate{
     
     
     var viewModel: HomeViewModel = HomeViewModel()
+    
+    // 用于回收事件序列
+    var disposeBag: DisposeBag! = DisposeBag()
+    
+    
     func bindViewModel() {
         
+        viewModel.loadHotList().subscribe(onNext: { liveArray in
+            
+            
+//            typealias O = Observable<[ResponseInfo]>
+//            typealias CC = (Int, ResponseInfo, HomeCell) -> Void
+//            
+//            let binder: O -> CC -> Disposable = self.tableView.rx.items(cellIdentifier: "", cellType: HomeCell.self
+//            )
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            self.dataSource = liveArray["info"]!
+            self.tableView.reloadData()
+        }, onError: {error in
+            dump(error)
+        }).addDisposableTo(self.disposeBag)
+
         
-        viewModel.loadHotList()
         
-//        dataSource = viewModel.data
+        
+        
         
         tableView.es_addPullToRefresh {
             [weak self] in
-            
             
             self?.tableView.es_stopPullToRefresh()
             self?.tableView.es_stopPullToRefresh(ignoreDate: false, ignoreFooter: true)
