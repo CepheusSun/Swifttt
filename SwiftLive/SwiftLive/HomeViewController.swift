@@ -33,6 +33,8 @@ UIViewControllerTransitioningDelegate{
         
         viewModel.loadHotList()
         
+//        dataSource = viewModel.data
+        
         tableView.es_addPullToRefresh {
             [weak self] in
             

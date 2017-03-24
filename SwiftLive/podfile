@@ -13,7 +13,7 @@ pod 'WMPageController'
 pod 'Alamofire'
 pod 'ObjectMapper'
 pod 'ReachabilitySwift'
-#pod 'RxSwift'
+pod 'RxSwift'
 #pod 'RxCocoa'
 pod 'ESPullToRefresh'
 end
