@@ -17,7 +17,6 @@ struct HomeCellSection {
     var item: [HomeLiveModel]
 }
 
-
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -39,16 +38,27 @@ class HomeViewController: UIViewController {
     func bindViewModel() {
         
         
+        viewModel.closure = {[weak self] (type, res) in
+            switch type {
+            case .ticker:
+                print(res!)
+            case .live:
+                self?.dataSource = (res as! [String:Any])["info"] as! [HomeLiveModel]
+                self?.tableView.reloadData()
+            }
+        }
         
-        viewModel.loadHotList().subscribe(onNext: { liveArray in    
-            self.dataSource = liveArray["info"]!
-            self.tableView.reloadData()
-        }, onError: {error in
-            dump(error)
-        }, onCompleted: {
-            self.tableView.es_stopLoadingMore()
-            self.tableView.es_stopPullToRefresh()
-        }).addDisposableTo(self.disposeBag)
+        _ = viewModel.loadData()
+        
+//        viewModel.loadData().subscribe(onNext: { liveArray in
+//            self.dataSource = liveArray["info"]!
+//            self.tableView.reloadData()
+//        }, onError: {error in
+//            dump(error)
+//        }, onCompleted: {
+//            self.tableView.es_stopLoadingMore()
+//            self.tableView.es_stopPullToRefresh()
+//        }).addDisposableTo(self.disposeBag)
 
 
         tableView.es_addPullToRefresh {

@@ -143,3 +143,26 @@ struct SYLabel: Mappable {
         tabName <- map["tab_name"]
     }
 }
+
+
+/// 轮播图模型
+struct SYTicker: Mappable {
+    
+    var atom : Int!
+    var image : String!
+    var link : String!
+    
+    init?(map: Map) {}
+    
+    
+    mutating func mapping(map: Map) {
+        atom <- map["atom"]
+        image <- map["image"]
+        link <- map["link"]
+    }
+}
+
+
+
+
+

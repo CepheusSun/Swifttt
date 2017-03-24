@@ -76,7 +76,7 @@
 		33C8A9211E836CE400AE94F4 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		33C8A9231E836D6C00AE94F4 /* SwiftLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLive-Bridging-Header.h"; sourceTree = "<group>"; };
 		33C8A9261E83851700AE94F4 /* AppCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
-		33C8A9291E8385E600AE94F4 /* MNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
+		33C8A9291E8385E600AE94F4 /* MNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNavigationController.swift; path = ../MNavigationController.swift; sourceTree = "<group>"; };
 		33C8A92B1E83954800AE94F4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		33C8A9371E83A67200AE94F4 /* SYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNetworkTool.swift; sourceTree = "<group>"; };
 		33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYLocationTool.swift; sourceTree = "<group>"; };
@@ -249,7 +249,8 @@
 		33C8A9281E8385D600AE94F4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				33C8A9291E8385E600AE94F4 /* MNavigationController.swift */,
+				33C8A9441E850C4100AE94F4 /* ViewModel */,
+				33C8A9431E850C3400AE94F4 /* Controller */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -286,6 +287,21 @@
 				33C8A93D1E83B22500AE94F4 /* SYDevice.swift */,
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		33C8A9431E850C3400AE94F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33C8A9291E8385E600AE94F4 /* MNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33C8A9441E850C4100AE94F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7AD020E763D9715C1FAD55E2 /* Pods */ = {
