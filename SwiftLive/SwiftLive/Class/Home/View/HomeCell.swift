@@ -29,7 +29,7 @@ class HomeCell: UITableViewCell {
             let imgUrl = URL(string: (model.creator.portrait))
             self.avatorImageview.kf.setImage(with: imgUrl)
             self.addressLabel.text = model.creator.location.isEmpty ? "": model.creator.location
-            self.viewerCountLabel.text = "\(model.onlineUsers)"
+            self.viewerCountLabel.text = "\(model.onlineUsers!)"
             self.bigImageView.kf.setImage(with: imgUrl)
             self.creatorNickName.text = model.creator.nick
         }

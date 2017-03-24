@@ -11,7 +11,6 @@ import Kingfisher
 import ESPullToRefresh
 import RxSwift
 import RxCocoa
-import RxDataSources
 
 struct HomeCellSection {
     var header: String
@@ -19,15 +18,12 @@ struct HomeCellSection {
 }
 
 
-
-class HomeViewController: UIViewController ,
-UIViewControllerTransitioningDelegate{
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource: [HomeLiveModel] = []
     
-    typealias SectionTableModel = SectionModel<String, ResponseInfo>
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,50 +32,28 @@ UIViewControllerTransitioningDelegate{
         self.bindViewModel()
     }
     
-    
     var viewModel: HomeViewModel = HomeViewModel()
-    
     // 用于回收事件序列
     var disposeBag: DisposeBag! = DisposeBag()
-    
-    
+
     func bindViewModel() {
         
-        viewModel.loadHotList().subscribe(onNext: { liveArray in
-            
-            
-//            typealias O = Observable<[ResponseInfo]>
-//            typealias CC = (Int, ResponseInfo, HomeCell) -> Void
-//            
-//            let binder: O -> CC -> Disposable = self.tableView.rx.items(cellIdentifier: "", cellType: HomeCell.self
-//            )
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        
+        
+        viewModel.loadHotList().subscribe(onNext: { liveArray in    
             self.dataSource = liveArray["info"]!
             self.tableView.reloadData()
         }, onError: {error in
             dump(error)
+        }, onCompleted: {
+            self.tableView.es_stopLoadingMore()
+            self.tableView.es_stopPullToRefresh()
         }).addDisposableTo(self.disposeBag)
 
-        
-        
-        
-        
-        
+
         tableView.es_addPullToRefresh {
             [weak self] in
-            
+
             self?.tableView.es_stopPullToRefresh()
             self?.tableView.es_stopPullToRefresh(ignoreDate: false, ignoreFooter: true)
         }
@@ -89,11 +63,15 @@ UIViewControllerTransitioningDelegate{
             self?.tableView.es_stopLoadingMore()
             
         }
-        
-        
     }
+}
 
-
+// MARK: - 协议方法
+extension HomeViewController:
+    UITableViewDelegate,
+    UITableViewDataSource,
+    UIViewControllerTransitioningDelegate {
+    
     // MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
@@ -123,5 +101,4 @@ UIViewControllerTransitioningDelegate{
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return PresentPushAnimation()
     }
-    
 }

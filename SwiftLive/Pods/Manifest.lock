@@ -6,9 +6,6 @@ PODS:
   - ReachabilitySwift (3)
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
-  - RxDataSources (1.0.3):
-    - RxCocoa (~> 3.0)
-    - RxSwift (~> 3.0)
   - RxSwift (3.2.0)
   - WMPageController (2.2.1)
 
@@ -19,7 +16,6 @@ DEPENDENCIES:
   - ObjectMapper
   - ReachabilitySwift
   - RxCocoa
-  - RxDataSources
   - RxSwift
   - WMPageController
 
@@ -30,10 +26,9 @@ SPEC CHECKSUMS:
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
-  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
 
-PODFILE CHECKSUM: f80400925e2dc04e77e796c55deef67d2d8887c3
+PODFILE CHECKSUM: 48111d364ca704e1d9722a1ccf5da98a19328d14
 
 COCOAPODS: 1.2.1.beta.1

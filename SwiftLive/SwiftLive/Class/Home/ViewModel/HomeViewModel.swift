@@ -15,16 +15,15 @@ typealias ResponseInfo = Dictionary<String, [HomeLiveModel]>
 
 class HomeViewModel {
     
+    
+    
     func loadHotList() -> Observable<ResponseInfo> {
         
         return Observable.create {
             (observer: AnyObserver<ResponseInfo>) -> Disposable in
-            
+
             let req = SYNetworkTool.shared.get("live/gettop", parameters: [:], finished: { (status, resp, err) in
-                
-                /**
-                 Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String : Any]])!
-                 */
+
                 switch status {
                 case .success:
                     let array = Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String: Any]])
@@ -40,7 +39,6 @@ class HomeViewModel {
             return Disposables.create {
                 req.cancel()
             }
-            
         }
     }
 }

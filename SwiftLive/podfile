@@ -15,6 +15,5 @@ pod 'ObjectMapper'
 pod 'ReachabilitySwift'
 pod 'RxSwift'
 pod 'RxCocoa'
-pod 'RxDataSources'
 pod 'ESPullToRefresh'
 end
