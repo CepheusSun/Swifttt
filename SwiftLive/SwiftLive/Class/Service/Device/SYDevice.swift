@@ -64,7 +64,6 @@ class SYDevice: NSObject {
     
 }
 
-
 extension SYDevice {
     /// 获取 app 版本信息
     ///

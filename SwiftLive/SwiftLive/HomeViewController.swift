@@ -17,17 +17,17 @@ struct HomeCellSection {
     var item: [HomeLiveModel]
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, SYCarouselViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource: [HomeLiveModel] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
-        self.tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = carouselView
         self.bindViewModel()
     }
     
@@ -35,44 +35,55 @@ class HomeViewController: UIViewController {
     // 用于回收事件序列
     var disposeBag: DisposeBag! = DisposeBag()
 
+    lazy var carouselView: SYCarouselView = {
+        let carouselView = SYCarouselView(frame: CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 3)))
+        carouselView.defaultImageString = "default_ticker"
+        carouselView.delegate = self
+        carouselView.set(pageColor: UIColor.orange,
+                         currentPageColor: UIColor.white)
+        
+        return carouselView
+    }()
+    
     func bindViewModel() {
         
         
         viewModel.closure = {[weak self] (type, res) in
             switch type {
             case .ticker:
-                print(res!)
+                let tickerArray: [SYTicker] = (res as! [String:Any])["info"] as! [SYTicker]
+                self?.carouselView.imageArray = tickerArray.map {
+                    var string = $0.image
+                    if !$0.image.hasPrefix("http") {
+                        string = "http://img2.inke.cn/\($0.image)"
+                    }
+                    return string!
+                } 
             case .live:
                 self?.dataSource = (res as! [String:Any])["info"] as! [HomeLiveModel]
                 self?.tableView.reloadData()
+                self?.tableView.es_stopPullToRefresh()
+                self?.tableView.es_stopLoadingMore()
             }
         }
         
         _ = viewModel.loadData()
-        
-//        viewModel.loadData().subscribe(onNext: { liveArray in
-//            self.dataSource = liveArray["info"]!
-//            self.tableView.reloadData()
-//        }, onError: {error in
-//            dump(error)
-//        }, onCompleted: {
-//            self.tableView.es_stopLoadingMore()
-//            self.tableView.es_stopPullToRefresh()
-//        }).addDisposableTo(self.disposeBag)
-
 
         tableView.es_addPullToRefresh {
             [weak self] in
-
-            self?.tableView.es_stopPullToRefresh()
-            self?.tableView.es_stopPullToRefresh(ignoreDate: false, ignoreFooter: true)
+            self?.viewModel.loadData()
         }
-        
         tableView.es_addInfiniteScrolling {
             [weak self] in
-            self?.tableView.es_stopLoadingMore()
-            
+            self?.viewModel.loadMoreData()
         }
+    }
+}
+
+extension HomeViewController {
+
+    func carouselView(_ carouselView: SYCarouselView, clickImageAt index: Int) {
+        
     }
 }
 

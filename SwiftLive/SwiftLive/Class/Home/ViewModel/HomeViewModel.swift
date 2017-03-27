@@ -13,6 +13,8 @@ import RxCocoa
 
 
 typealias ResponseInfo = Dictionary<String, [HomeLiveModel]>
+typealias ResponseTickerInfo = Dictionary<String, [SYTicker]>
+
 
 enum ResponseType{
     case live
@@ -35,7 +37,7 @@ class HomeViewModel {
         }
     }
     
-    var ticker: [SYTicker]? {
+    var ticker: ResponseTickerInfo? {
         didSet {
             self.closure?(.ticker, ticker)
         }
@@ -50,16 +52,16 @@ class HomeViewModel {
     
     /// 刷新数据
     func loadData() {
-        return self.loadHotList()
+        return self.loadHotList(true)
     }
     
     /// 加载下一页数据
     func loadMoreData() {
-        return self.loadHotList()
+        return self.loadHotList(false)
     }
     
     
-    private func loadHotList() {
+    private func loadHotList(_ ticker: Bool) {
         
         _ = SYNetworkTool.shared
             .get("live/gettop", parameters: [:], finished: { (status, resp, err) in
@@ -74,14 +76,14 @@ class HomeViewModel {
                     self.error = err
                 }
             })
-        
+        if !ticker { return }
         _ = SYNetworkTool.shared
             .get("live/ticker", parameters: [:], finished: { (status, resp, err) in
                 
                 switch status {
                 case .success:
-                    let array = resp?["ticker"]
-                    self.ticker = Mapper<SYTicker>().mapArray(JSONArray: array as! [[String : Any]])
+                    let array = Mapper<SYTicker>().mapArray(JSONArray: resp?["ticker"] as! [[String : Any]])
+                    self.ticker = ["info": array!]
                 case .unusual:
                     self.error = err
                 case .failure:

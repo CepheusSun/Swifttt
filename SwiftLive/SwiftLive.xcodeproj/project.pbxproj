@@ -42,6 +42,7 @@
 		33C8A93B1E83A6A200AE94F4 /* SYLocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */; };
 		33C8A93E1E83B22500AE94F4 /* SYDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93D1E83B22500AE94F4 /* SYDevice.swift */; };
 		33C8A9401E83CA9800AE94F4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93F1E83CA9800AE94F4 /* HomeViewModel.swift */; };
+		33C8A9561E88A42900AE94F4 /* SYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9551E88A42900AE94F4 /* SYCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		33C8A93A1E83A6A200AE94F4 /* SYLocationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYLocationTool.swift; sourceTree = "<group>"; };
 		33C8A93D1E83B22500AE94F4 /* SYDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYDevice.swift; sourceTree = "<group>"; };
 		33C8A93F1E83CA9800AE94F4 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		33C8A9551E88A42900AE94F4 /* SYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYCarouselView.swift; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
 		FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +344,7 @@
 		33C8A9501E88A26000AE94F4 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				33C8A9541E88A3FF00AE94F4 /* UIView */,
 				33C8A9531E88A2BD00AE94F4 /* UIKit */,
 				33C8A9521E88A2B200AE94F4 /* Foundation */,
 				33C8A9511E88A2A100AE94F4 /* Block */,
@@ -369,6 +372,14 @@
 			children = (
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		33C8A9541E88A3FF00AE94F4 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				33C8A9551E88A42900AE94F4 /* SYCarouselView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		7AD020E763D9715C1FAD55E2 /* Pods */ = {
@@ -553,6 +564,7 @@
 				33C8A92A1E8385E600AE94F4 /* MNavigationController.swift in Sources */,
 				33C8A93B1E83A6A200AE94F4 /* SYLocationTool.swift in Sources */,
 				3311BFD11E827CCC00AF6344 /* PresentPushAnimation.swift in Sources */,
+				33C8A9561E88A42900AE94F4 /* SYCarouselView.swift in Sources */,
 				33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */,
 				33BD599E1E825DAF00AE1E60 /* HomeCell.swift in Sources */,
 				33C8A9381E83A67200AE94F4 /* SYNetworkTool.swift in Sources */,
