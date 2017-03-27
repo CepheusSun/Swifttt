@@ -120,7 +120,8 @@
 				3311BFA81E826D4B00AF6344 /* View */,
 				3311BFA91E826D4B00AF6344 /* ViewModel */,
 			);
-			path = Live;
+			name = Live;
+			path = ../Live;
 			sourceTree = "<group>";
 		};
 		3311BFA61E826D4B00AF6344 /* Controller */ = {
@@ -191,9 +192,6 @@
 				33C8A9481E88A11C00AE94F4 /* Classes */,
 				33C8A9471E88A0B800AE94F4 /* Support Files */,
 				33C8A9311E83A65500AE94F4 /* Service */,
-				33C8A9281E8385D600AE94F4 /* Base */,
-				3311BFA51E826D4B00AF6344 /* Live */,
-				33BD598B1E8254F000AE1E60 /* Home */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -207,7 +205,8 @@
 				33BD598E1E8254F000AE1E60 /* View */,
 				33BD598F1E8254F000AE1E60 /* ViewModel */,
 			);
-			path = Home;
+			name = Home;
+			path = ../Home;
 			sourceTree = "<group>";
 		};
 		33BD598C1E8254F000AE1E60 /* Controller */ = {
@@ -250,7 +249,8 @@
 				33C8A9441E850C4100AE94F4 /* ViewModel */,
 				33C8A9431E850C3400AE94F4 /* Controller */,
 			);
-			path = Base;
+			name = Base;
+			path = ../Base;
 			sourceTree = "<group>";
 		};
 		33C8A9311E83A65500AE94F4 /* Service */ = {
@@ -316,8 +316,10 @@
 		33C8A9481E88A11C00AE94F4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				33C8A9281E8385D600AE94F4 /* Base */,
+				3311BFA51E826D4B00AF6344 /* Live */,
+				33BD598B1E8254F000AE1E60 /* Home */,
 				33C8A94C1E88A14200AE94F4 /* Controls */,
-				33C8A94D1E88A14200AE94F4 /* API */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -327,13 +329,6 @@
 			children = (
 			);
 			path = Controls;
-			sourceTree = "<group>";
-		};
-		33C8A94D1E88A14200AE94F4 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		33C8A94E1E88A20100AE94F4 /* Config */ = {
