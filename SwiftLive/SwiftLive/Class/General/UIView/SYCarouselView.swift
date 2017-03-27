@@ -121,7 +121,7 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
         }
     }
     
-    private var currIndex:Int = 0
+    fileprivate var currIndex:Int = 0
     
     /// 轮播的图片数组。
     public var imageArray:[String]? = []{
@@ -129,12 +129,11 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
             if newValue?.count == 0 {
                 return
             }
-            
+        }
+        didSet {
             if currIndex >= (imageArray?.count)! && (imageArray?.count)! > 0{
                 currIndex = (imageArray?.count)! - 1
             }
-        }
-        didSet {
             if (imageArray?.count)! > 0 {
                 let url = URL(string: (imageArray?[currIndex])!)
                 self.currImageView?.kf.setImage(with: url,
@@ -187,16 +186,8 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
     /// 代理，用来处理图片的点击
     weak public var delegate: SYCarouselViewDelegate?
     
-    private lazy var describleLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = UIColor(white: 0, alpha: 0.5)
-        label.textColor = UIColor.white
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.isHidden = true
-        return label
-    }()
-    
+    // MARK - 主控件
+    // MARK  scrollView
     private lazy var scrollView: UIScrollView = {
         [weak self] in
         let scrollView = UIScrollView()
@@ -217,7 +208,22 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
         return scrollView
     }()
     
-    
+    // MARK: - 描述文字
+    private lazy var describleLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.isHidden = true
+        return label
+    }()
+    // MARK: - 分页控制器
+    private lazy var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.isUserInteractionEnabled = false
+        return pageControl
+    }()
     
     func imageClick() {
         if (imageClickBlock != nil) {
@@ -225,18 +231,12 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
         } else if (delegate != nil) {
             self.delegate?.carouselView(self, clickImageAt: self.currIndex)
         }
-        
     }
     
-    private lazy var pageControl: UIPageControl = {
-        let pageControl = UIPageControl()
-        pageControl.isUserInteractionEnabled = false
-        return pageControl
-    }()
-    private var currImageView: UIImageView?
+    fileprivate var currImageView: UIImageView?
     fileprivate var otherImageView: UIImageView?
     
-    
+    // MARK: - 初始化方法
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.initSubView()
@@ -251,6 +251,7 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK - 初始化后布局
     private func initSubView() {
         self.addSubview(scrollView)
         self.addSubview(describleLabel)
@@ -280,17 +281,17 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
                 otherImageView?.alpha = 0
                 self.insertSubview(currImageView!, at: 0)
                 self.insertSubview(otherImageView!, at: 1)
-                self.startTimer()
-            } else {
-                //只有一张图片时，scrollview不可滚动，且关闭定时器
-                scrollView.contentSize = CGSize.zero
-                scrollView.contentOffset = CGPoint.zero
-                self.currImageView?.frame = CGRect.init(x: 0,
-                                                        y: 0,
-                                                        width: self.width(),
-                                                        height: self.height())
-                self.stopTimer()
             }
+            self.startTimer()
+        } else {
+            //只有一张图片时，scrollview不可滚动，且关闭定时器
+            scrollView.contentSize = CGSize.zero
+            scrollView.contentOffset = CGPoint.zero
+            self.currImageView?.frame = CGRect.init(x: 0,
+                                                    y: 0,
+                                                    width: self.width(),
+                                                    height: self.height())
+            self.stopTimer()
         }
     }
     
@@ -316,11 +317,6 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
             self.timer = Timer.init(timeInterval: timeInterval, target: self, selector: #selector(self.nextPage), userInfo: nil, repeats: true)
             RunLoop.main.add(self.timer!, forMode: .commonModes)
         }
-        
-            
-        
-    
-
     }
     
     fileprivate func stopTimer() {
@@ -333,7 +329,8 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
         if changeMode == .fade {
             nextIndex = (currIndex + 1) % (imageArray?.count)!
             let url = URL(string: (imageArray?[nextIndex!])!)
-            otherImageView?.kf.setImage(with: url)
+            otherImageView?.kf.setImage(with: url, placeholder: UIImage(named: defaultImageString),
+                                        options: nil, progressBlock: nil, completionHandler: nil)
             
             UIView.animate(withDuration: 1.2, animations: { 
                 self.currImageView?.alpha = 0
@@ -348,13 +345,13 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
     }
     
     
-    private func changeToNext() {
+    fileprivate func changeToNext() {
         if changeMode == .fade {
             currImageView?.alpha = 1
             otherImageView?.alpha = 0
         }
         currImageView?.image = otherImageView?.image
-        scrollView.contentOffset = CGPoint(x: self.width()*3, y: 0)
+        scrollView.contentOffset = CGPoint(x: self.width()*2, y: 0)
         scrollView.layoutSubviews()
         currIndex = nextIndex!
         pageControl.currentPage = currIndex
@@ -387,7 +384,7 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
     
     
     // MARK: - frame相关
-    private func height() -> CGFloat {
+    fileprivate func height() -> CGFloat {
         return scrollView.frame.height
     }
     
@@ -410,8 +407,22 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
         self.setScrollViewContentSize()
     }
     
+    fileprivate func changeCurrentPage(with offSetX: CGFloat!) {
+        if offSetX < self.width() * 1.5 {
+            var index = currIndex - 1
+            if index < 0 {
+                index = (self.imageArray?.count)! - 1
+                pageControl.currentPage = index
+            } else if offSetX > self.width() * 2.5 {
+                pageControl.currentPage = (currIndex + 1) % (imageArray?.count)!
+            } else {
+                pageControl.currentPage = currIndex
+            }
+        }
+    }
 }
 
+// MARK: - ScrollView 代理方法
 extension SYCarouselView {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.stopTimer()
@@ -430,6 +441,56 @@ extension SYCarouselView {
         if abs(pointInSelf.x) != self.width() {
             let offsetX = scrollView.contentOffset.x + pointInSelf.x
             scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if __CGSizeEqualToSize(CGSize.zero, scrollView.contentSize) {
+            return
+        }
+        
+        let offsetX = scrollView.contentOffset.x
+        self.changeCurrentPage(with: offsetX)
+        if offsetX < self.width() * 2 {
+            if changeMode == .fade {
+                currImageView?.alpha = offsetX / self.width() - 1
+                otherImageView?.alpha = 2 - offsetX / self.width()
+            } else {
+                otherImageView?.frame = CGRect(x: self.width(),
+                                               y: 0,
+                                               width: self.width(),
+                                               height: self.height())
+            }
+            
+            nextIndex = currIndex - 1
+            if nextIndex! < 0 {
+                nextIndex = (imageArray?.count)! - 1
+            }
+            let nextUrl = URL(string: (self.imageArray?[self.nextIndex!])!)
+            otherImageView?.kf.setImage(with: nextUrl,
+                                        placeholder: UIImage(named: defaultImageString),
+                                        options: nil, progressBlock: nil, completionHandler: nil)
+            if offsetX <= self.width() {
+                self.changeToNext()
+            }
+        } else if offsetX > self.width() * 2{
+            if changeMode == .fade {
+                otherImageView?.alpha = offsetX / self.width() - 2
+                currImageView?.alpha = 3 - offsetX / self.width()
+            } else {
+                otherImageView?.frame = CGRect(x: (currImageView?.frame)!.maxX,
+                                               y: 0,
+                                               width: self.width(),
+                                               height: self.height())
+            }
+            nextIndex = (currIndex + 1) % (imageArray?.count)!
+            let nextUrl = URL(string: (self.imageArray?[self.nextIndex!])!)
+            otherImageView?.kf.setImage(with: nextUrl, placeholder: UIImage(named: defaultImageString),
+                                        options: nil, progressBlock: nil, completionHandler: nil)
+            
+            if offsetX >= self.width() * 3 {
+                self.changeToNext()
+            }
         }
     }
 }

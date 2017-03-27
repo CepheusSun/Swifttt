@@ -55,12 +55,20 @@ class HomeViewController: UIViewController, SYCarouselViewDelegate {
                 self?.carouselView.imageArray = tickerArray.map {
                     var string = $0.image
                     if !$0.image.hasPrefix("http") {
-                        string = "http://img2.inke.cn/\($0.image)"
+                        string = "http://img2.inke.cn/\($0.image!)"
                     }
                     return string!
                 } 
             case .live:
-                self?.dataSource = (res as! [String:Any])["info"] as! [HomeLiveModel]
+                let liveArray = (res as! [String:Any])["info"] as! [HomeLiveModel]
+                self?.dataSource = liveArray.map {
+                    var live = $0
+                    if !live.creator.portrait.hasPrefix("http") {
+                        live.creator.portrait = "http://img2.inke.cn/\((live.creator.portrait)!)"
+                    }
+                    return live
+                }
+                
                 self?.tableView.reloadData()
                 self?.tableView.es_stopPullToRefresh()
                 self?.tableView.es_stopLoadingMore()
