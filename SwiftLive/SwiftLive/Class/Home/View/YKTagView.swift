@@ -65,7 +65,7 @@ extension YKTagView {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // DO: 计算文字长度
         let width = dataSource[indexPath.row].width(for: UIFont.systemFont(ofSize: 11), height: 18)!
-        return CGSize(width: width > CGFloat(45) ? width + 14 : CGFloat(45), height: 18)
+        return CGSize(width: width + 30, height: 18)
     }
 }
 

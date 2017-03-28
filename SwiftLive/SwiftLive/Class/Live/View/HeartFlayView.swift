@@ -46,7 +46,7 @@ class HeartFlayView: UIView {
         let rotationFraction = arc4random_uniform(10)
         
         UIView.animate(withDuration: TimeInterval(totalAnimationDuration)) { 
-            self.transform = CGAffineTransform(rotationAngle: CGFloat(rotationDirection) * CGFloat(M_PI) / (CGFloat(16) + CGFloat(rotationFraction) + CGFloat(0.2)))
+            self.transform = CGAffineTransform(rotationAngle: CGFloat(rotationDirection) * CGFloat.pi / (CGFloat(16) + CGFloat(rotationFraction) + CGFloat(0.2)))
         }
         
         let heartTravelPath = UIBezierPath()
@@ -127,7 +127,7 @@ class HeartFlayView: UIView {
         heartPath.addArc(withCenter: CGPoint(x: topLeftCurveStart.x + curveRadius,
                                              y: topLeftCurveStart.y),
                          radius: curveRadius,
-                         startAngle: CGFloat(M_PI),
+                         startAngle: CGFloat.pi,
                          endAngle: 0,
                          clockwise: true)
         
@@ -138,7 +138,7 @@ class HeartFlayView: UIView {
         heartPath.addArc(withCenter: CGPoint(x: topRightCurveStart.x + curveRadius,
                                              y: topRightCurveStart.y),
                          radius: curveRadius,
-                     startAngle: CGFloat(M_PI),
+                     startAngle: CGFloat.pi,
                      endAngle: 0,
                      clockwise: true)
 
