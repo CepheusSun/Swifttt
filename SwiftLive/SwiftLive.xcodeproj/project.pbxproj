@@ -44,6 +44,7 @@
 		33C8A93E1E83B22500AE94F4 /* SYDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93D1E83B22500AE94F4 /* SYDevice.swift */; };
 		33C8A9401E83CA9800AE94F4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A93F1E83CA9800AE94F4 /* HomeViewModel.swift */; };
 		33C8A9561E88A42900AE94F4 /* SYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A9551E88A42900AE94F4 /* SYCarouselView.swift */; };
+		33FE2A171E8A201100EE2B49 /* String+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE2A161E8A201100EE2B49 /* String+Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		33C8A93D1E83B22500AE94F4 /* SYDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYDevice.swift; sourceTree = "<group>"; };
 		33C8A93F1E83CA9800AE94F4 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		33C8A9551E88A42900AE94F4 /* SYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYCarouselView.swift; sourceTree = "<group>"; };
+		33FE2A161E8A201100EE2B49 /* String+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Frame.swift"; sourceTree = "<group>"; };
 		79B9B1EEE8497BB19711C19A /* Pods-SwiftLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB92797A53A5DF2F49618E77 /* Pods-SwiftLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLive/Pods-SwiftLive.release.xcconfig"; sourceTree = "<group>"; };
 		FD704FF4E49A05FE989F5BDC /* Pods_SwiftLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				3311BFCA1E8273DF00AF6344 /* Color+Extension.swift */,
+				33FE2A161E8A201100EE2B49 /* String+Frame.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				33C8A9221E836CE400AE94F4 /* HomeController.swift in Sources */,
 				33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */,
 				33C8A92A1E8385E600AE94F4 /* MNavigationController.swift in Sources */,
+				33FE2A171E8A201100EE2B49 /* String+Frame.swift in Sources */,
 				33C8A93B1E83A6A200AE94F4 /* SYLocationTool.swift in Sources */,
 				3311BFD11E827CCC00AF6344 /* PresentPushAnimation.swift in Sources */,
 				33C8A9561E88A42900AE94F4 /* SYCarouselView.swift in Sources */,

@@ -17,11 +17,11 @@ class YKTagView: UIView , UICollectionViewDataSource, UICollectionViewDelegateFl
         [weak self] in
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 45, height: 18)
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets.zero
         let collectionView = UICollectionView(frame: (self?.bounds)!, collectionViewLayout: layout)
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.bounces = true
         collectionView.backgroundColor = UIColor.white
         collectionView.showsHorizontalScrollIndicator = false
@@ -53,7 +53,7 @@ class YKTagView: UIView , UICollectionViewDataSource, UICollectionViewDelegateFl
 extension YKTagView {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -64,13 +64,10 @@ extension YKTagView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // DO: 计算文字长度
-        
-        
-        return CGSize(width: 45, height: 18)
+        let width = dataSource[indexPath.row].width(for: UIFont.systemFont(ofSize: 11), height: 18)!
+        return CGSize(width: width > CGFloat(45) ? width + 14 : CGFloat(45), height: 18)
     }
 }
-
-
 
 class YKTagViewCell: UICollectionViewCell {
     
