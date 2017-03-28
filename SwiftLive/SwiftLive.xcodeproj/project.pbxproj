@@ -27,6 +27,7 @@
 		3311BFCB1E8273DF00AF6344 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311BFCA1E8273DF00AF6344 /* Color+Extension.swift */; };
 		3311BFCD1E8273EB00AF6344 /* emmitParticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311BFCC1E8273EB00AF6344 /* emmitParticles.swift */; };
 		3311BFD11E827CCC00AF6344 /* PresentPushAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311BFD01E827CCC00AF6344 /* PresentPushAnimation.swift */; };
+		3341EF801E89FBAD0058D66F /* YKTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341EF7F1E89FBAD0058D66F /* YKTagView.swift */; };
 		33BD59791E8251D700AE1E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD59781E8251D700AE1E60 /* AppDelegate.swift */; };
 		33BD597B1E8251D700AE1E60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD597A1E8251D700AE1E60 /* HomeViewController.swift */; };
 		33BD59831E8251D700AE1E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BD59811E8251D700AE1E60 /* LaunchScreen.storyboard */; };
@@ -65,6 +66,7 @@
 		3311BFCA1E8273DF00AF6344 /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "../../Color+Extension.swift"; sourceTree = "<group>"; };
 		3311BFCC1E8273EB00AF6344 /* emmitParticles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emmitParticles.swift; sourceTree = "<group>"; };
 		3311BFD01E827CCC00AF6344 /* PresentPushAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentPushAnimation.swift; path = ../PresentPushAnimation.swift; sourceTree = "<group>"; };
+		3341EF7F1E89FBAD0058D66F /* YKTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKTagView.swift; sourceTree = "<group>"; };
 		33BD59751E8251D700AE1E60 /* SwiftLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33BD59781E8251D700AE1E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
 		33BD597A1E8251D700AE1E60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../HomeViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				33BD599C1E825DAF00AE1E60 /* HomeCell.swift */,
 				33BD599D1E825DAF00AE1E60 /* HomeCell.xib */,
+				3341EF7F1E89FBAD0058D66F /* YKTagView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				33C8A9381E83A67200AE94F4 /* SYNetworkTool.swift in Sources */,
 				3311BFAC1E826D6C00AF6344 /* LiveViewController.swift in Sources */,
 				33C8A93E1E83B22500AE94F4 /* SYDevice.swift in Sources */,
+				3341EF801E89FBAD0058D66F /* YKTagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

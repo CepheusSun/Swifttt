@@ -27,15 +27,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwV-0l-83i">
-                        <rect key="frame" x="112" y="45" width="25" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="rtu-uG-3p6">
-                        <rect key="frame" x="75" y="36" width="32" height="32"/>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jzj-4C-ZoN">
                         <rect key="frame" x="8" y="8" width="60" height="60"/>
                         <constraints>
@@ -60,15 +51,24 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liv_tag_live" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-Xn-ALN">
+                        <rect key="frame" x="233" y="91" width="77" height="28"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADA-B4-eTu" customClass="YKTagView" customModule="SwiftLive" customModuleProvider="target">
+                        <rect key="frame" x="75" y="39" width="237" height="34"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="gjX-Xn-ALN" firstAttribute="top" secondItem="Lc4-oh-pmz" secondAttribute="bottom" constant="62" id="0sE-rS-cFa"/>
                     <constraint firstAttribute="trailing" secondItem="rYv-PF-U2d" secondAttribute="trailing" constant="9" id="0wh-2S-K0e"/>
-                    <constraint firstItem="YwV-0l-83i" firstAttribute="leading" secondItem="rtu-uG-3p6" secondAttribute="trailing" constant="5" id="26s-Fr-f1M"/>
                     <constraint firstItem="Lc4-oh-pmz" firstAttribute="centerY" secondItem="T6M-NY-FM9" secondAttribute="centerY" id="3MR-Hw-LyN"/>
+                    <constraint firstItem="ADA-B4-eTu" firstAttribute="trailing" secondItem="Lc4-oh-pmz" secondAttribute="trailing" id="5yz-9E-ZRo"/>
                     <constraint firstAttribute="trailing" secondItem="Lc4-oh-pmz" secondAttribute="trailing" constant="8" id="7Wl-Xj-42E"/>
-                    <constraint firstItem="rtu-uG-3p6" firstAttribute="leading" secondItem="T6M-NY-FM9" secondAttribute="leading" id="8yM-yD-vXo"/>
-                    <constraint firstItem="YwV-0l-83i" firstAttribute="centerY" secondItem="rtu-uG-3p6" secondAttribute="centerY" id="A6i-19-jyV"/>
                     <constraint firstAttribute="bottom" secondItem="Xiw-od-lwP" secondAttribute="bottom" id="EVp-6z-WV9"/>
+                    <constraint firstItem="ADA-B4-eTu" firstAttribute="bottom" secondItem="jzj-4C-ZoN" secondAttribute="bottom" constant="5" id="P8g-yJ-5Tb"/>
+                    <constraint firstItem="ADA-B4-eTu" firstAttribute="leading" secondItem="T6M-NY-FM9" secondAttribute="leading" id="QhI-9r-c0f"/>
+                    <constraint firstAttribute="trailing" secondItem="gjX-Xn-ALN" secondAttribute="trailing" constant="10" id="V6F-eU-G40"/>
                     <constraint firstItem="T6M-NY-FM9" firstAttribute="leading" secondItem="jzj-4C-ZoN" secondAttribute="trailing" constant="7" id="Wcb-3z-rLs"/>
                     <constraint firstItem="T6M-NY-FM9" firstAttribute="top" secondItem="jzj-4C-ZoN" secondAttribute="top" id="XP0-RB-wbF"/>
                     <constraint firstItem="Xiw-od-lwP" firstAttribute="top" secondItem="jzj-4C-ZoN" secondAttribute="bottom" constant="8" id="ZBr-Kp-Jcy"/>
@@ -77,24 +77,25 @@
                     <constraint firstItem="rYv-PF-U2d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="eMJ-NE-ZMT"/>
                     <constraint firstItem="Xiw-od-lwP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="efW-Mb-DuO"/>
                     <constraint firstItem="jzj-4C-ZoN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="erQ-ay-Bxn"/>
+                    <constraint firstItem="ADA-B4-eTu" firstAttribute="top" secondItem="Lc4-oh-pmz" secondAttribute="bottom" constant="10" id="fo6-hC-Pcp"/>
                     <constraint firstItem="Lc4-oh-pmz" firstAttribute="leading" secondItem="T6M-NY-FM9" secondAttribute="trailing" constant="8" id="gjg-bz-Eo9"/>
-                    <constraint firstItem="rtu-uG-3p6" firstAttribute="bottom" secondItem="jzj-4C-ZoN" secondAttribute="bottom" id="jyG-c3-sPp"/>
                     <constraint firstAttribute="trailing" secondItem="T6M-NY-FM9" secondAttribute="trailing" constant="100" id="rAm-WM-8Bm"/>
                     <constraint firstAttribute="trailing" secondItem="Xiw-od-lwP" secondAttribute="trailing" id="zRR-fC-5ur"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="addressLabel" destination="YwV-0l-83i" id="zWn-gO-tv1"/>
                 <outlet property="avatorImageview" destination="jzj-4C-ZoN" id="THK-bl-p4z"/>
                 <outlet property="bigImageView" destination="Xiw-od-lwP" id="c3k-VX-Lx1"/>
                 <outlet property="creatorNickName" destination="T6M-NY-FM9" id="qCT-0Q-DvE"/>
+                <outlet property="liveTag" destination="gjX-Xn-ALN" id="pXh-70-oJ9"/>
                 <outlet property="nameLabel" destination="rYv-PF-U2d" id="NU3-L3-1ZA"/>
+                <outlet property="tagView" destination="ADA-B4-eTu" id="z3M-t9-Q4D"/>
                 <outlet property="viewerCountLabel" destination="Lc4-oh-pmz" id="Ar8-QH-kRg"/>
             </connections>
             <point key="canvasLocation" x="-217" y="374"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="address" width="32" height="32"/>
+        <image name="liv_tag_live" width="77" height="28"/>
     </resources>
 </document>

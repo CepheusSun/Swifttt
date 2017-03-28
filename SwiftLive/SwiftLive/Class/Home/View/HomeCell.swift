@@ -17,13 +17,13 @@ class HomeCell: UITableViewCell {
     
     @IBOutlet weak var viewerCountLabel: UILabel!
     
-    @IBOutlet weak var addressLabel: UILabel!
-    
     @IBOutlet weak var bigImageView: UIImageView!
     
+    @IBOutlet weak var liveTag: UIImageView!
     // 相当于这个直播的标题
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var tagView: YKTagView!
     var model: HomeLiveModel! {
         didSet {
             if !model.creator.portrait.hasPrefix("http") {
@@ -31,11 +31,14 @@ class HomeCell: UITableViewCell {
             }
             let imgUrl = URL(string: (model.creator.portrait))
             self.avatorImageview.kf.setImage(with: imgUrl)
-            self.addressLabel.text = model.creator.location.isEmpty ? "": model.creator.location
             self.viewerCountLabel.text = "\(model.onlineUsers!)"
             self.bigImageView.kf.setImage(with: imgUrl)
             self.creatorNickName.text = model.creator.nick
             self.nameLabel.text = model.name!
+            self.liveTag.isHidden = !(model.status == 1)
+            self.tagView.dataSource = model.extra.label.map{
+                return $0.tabName
+            }
         }
     }
     

@@ -68,7 +68,6 @@ class HomeViewModel {
                 switch status {
                 case .success:
                     let array = Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String: Any]])
-                    dump(array)
                     self.result = ["info": array!]
                 case .unusual:
                     self.error = err
