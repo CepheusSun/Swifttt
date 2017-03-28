@@ -35,9 +35,7 @@ struct HomeLiveModel: Mappable {
     var tagId : Int!
     var token : String!
     var version : Int!
-    
     init?(map: Map) {}
-    
     
     mutating func mapping(map: Map) {
         city <- map["city"]

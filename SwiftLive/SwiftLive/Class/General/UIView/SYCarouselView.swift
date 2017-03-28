@@ -77,9 +77,8 @@ class SYCarouselView: UIView, UIScrollViewDelegate {
     /// 设置分页控件的位置, 只有一张的时候 默认隐藏
     public var pagePosition:PageControlPosition = .Default {
         didSet {
-            if pageControl.isHidden {return}
             pageControl.isHidden = (pagePosition == .hide) || (imageArray?.count == 0)
-            
+            if pageControl.isHidden {return}
             var size: CGSize
             if (pageImageSize == nil) {
                 size = pageControl.size(forNumberOfPages: pageControl.numberOfPages)

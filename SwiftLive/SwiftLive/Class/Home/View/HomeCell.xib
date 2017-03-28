@@ -54,8 +54,15 @@
                         <color key="textColor" red="0.91723114252090454" green="0.55089867115020752" blue="0.17324692010879517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYv-PF-U2d">
+                        <rect key="frame" x="9" y="592" width="302" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rYv-PF-U2d" secondAttribute="trailing" constant="9" id="0wh-2S-K0e"/>
                     <constraint firstItem="YwV-0l-83i" firstAttribute="leading" secondItem="rtu-uG-3p6" secondAttribute="trailing" constant="5" id="26s-Fr-f1M"/>
                     <constraint firstItem="Lc4-oh-pmz" firstAttribute="centerY" secondItem="T6M-NY-FM9" secondAttribute="centerY" id="3MR-Hw-LyN"/>
                     <constraint firstAttribute="trailing" secondItem="Lc4-oh-pmz" secondAttribute="trailing" constant="8" id="7Wl-Xj-42E"/>
@@ -65,7 +72,9 @@
                     <constraint firstItem="T6M-NY-FM9" firstAttribute="leading" secondItem="jzj-4C-ZoN" secondAttribute="trailing" constant="7" id="Wcb-3z-rLs"/>
                     <constraint firstItem="T6M-NY-FM9" firstAttribute="top" secondItem="jzj-4C-ZoN" secondAttribute="top" id="XP0-RB-wbF"/>
                     <constraint firstItem="Xiw-od-lwP" firstAttribute="top" secondItem="jzj-4C-ZoN" secondAttribute="bottom" constant="8" id="ZBr-Kp-Jcy"/>
+                    <constraint firstAttribute="bottom" secondItem="rYv-PF-U2d" secondAttribute="bottom" constant="7" id="d6w-Vc-YJb"/>
                     <constraint firstItem="jzj-4C-ZoN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="doV-vr-1S2"/>
+                    <constraint firstItem="rYv-PF-U2d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="eMJ-NE-ZMT"/>
                     <constraint firstItem="Xiw-od-lwP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="efW-Mb-DuO"/>
                     <constraint firstItem="jzj-4C-ZoN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="erQ-ay-Bxn"/>
                     <constraint firstItem="Lc4-oh-pmz" firstAttribute="leading" secondItem="T6M-NY-FM9" secondAttribute="trailing" constant="8" id="gjg-bz-Eo9"/>
@@ -79,6 +88,7 @@
                 <outlet property="avatorImageview" destination="jzj-4C-ZoN" id="THK-bl-p4z"/>
                 <outlet property="bigImageView" destination="Xiw-od-lwP" id="c3k-VX-Lx1"/>
                 <outlet property="creatorNickName" destination="T6M-NY-FM9" id="qCT-0Q-DvE"/>
+                <outlet property="nameLabel" destination="rYv-PF-U2d" id="NU3-L3-1ZA"/>
                 <outlet property="viewerCountLabel" destination="Lc4-oh-pmz" id="Ar8-QH-kRg"/>
             </connections>
             <point key="canvasLocation" x="-217" y="374"/>

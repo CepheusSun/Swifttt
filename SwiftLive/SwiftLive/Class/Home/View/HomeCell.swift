@@ -21,6 +21,9 @@ class HomeCell: UITableViewCell {
     
     @IBOutlet weak var bigImageView: UIImageView!
     
+    // 相当于这个直播的标题
+    @IBOutlet weak var nameLabel: UILabel!
+    
     var model: HomeLiveModel! {
         didSet {
             if !model.creator.portrait.hasPrefix("http") {
@@ -32,6 +35,7 @@ class HomeCell: UITableViewCell {
             self.viewerCountLabel.text = "\(model.onlineUsers!)"
             self.bigImageView.kf.setImage(with: imgUrl)
             self.creatorNickName.text = model.creator.nick
+            self.nameLabel.text = model.name!
         }
     }
     

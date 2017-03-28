@@ -39,9 +39,8 @@ class HomeViewController: UIViewController, SYCarouselViewDelegate {
         let carouselView = SYCarouselView(frame: CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 3)))
         carouselView.defaultImageString = "default_ticker"
         carouselView.delegate = self
-        carouselView.set(pageColor: UIColor.orange,
-                         currentPageColor: UIColor.white)
-        
+        carouselView.set(pageColor: UIColor.white,
+                         currentPageColor: THEME_COLOR)
         return carouselView
     }()
     
@@ -58,7 +57,8 @@ class HomeViewController: UIViewController, SYCarouselViewDelegate {
                         string = "http://img2.inke.cn/\($0.image!)"
                     }
                     return string!
-                } 
+                }
+//                self?.carouselView.describeArray = ["aa","bb","bb","bb","bb","bb","bb"]
             case .live:
                 let liveArray = (res as! [String:Any])["info"] as! [HomeLiveModel]
                 self?.dataSource = liveArray.map {
@@ -68,7 +68,6 @@ class HomeViewController: UIViewController, SYCarouselViewDelegate {
                     }
                     return live
                 }
-                
                 self?.tableView.reloadData()
                 self?.tableView.es_stopPullToRefresh()
                 self?.tableView.es_stopLoadingMore()

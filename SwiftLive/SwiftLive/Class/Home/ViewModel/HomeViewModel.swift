@@ -65,10 +65,10 @@ class HomeViewModel {
         
         _ = SYNetworkTool.shared
             .get("live/gettop", parameters: [:], finished: { (status, resp, err) in
-                
                 switch status {
                 case .success:
                     let array = Mapper<HomeLiveModel>().mapArray(JSONArray: resp?["lives"] as! [[String: Any]])
+                    dump(array)
                     self.result = ["info": array!]
                 case .unusual:
                     self.error = err
@@ -79,7 +79,6 @@ class HomeViewModel {
         if !ticker { return }
         _ = SYNetworkTool.shared
             .get("live/ticker", parameters: [:], finished: { (status, resp, err) in
-                
                 switch status {
                 case .success:
                     let array = Mapper<SYTicker>().mapArray(JSONArray: resp?["ticker"] as! [[String : Any]])
